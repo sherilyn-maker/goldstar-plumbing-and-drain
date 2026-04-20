@@ -159,6 +159,33 @@ tbody tr:last-child td{border-bottom:none}
 .note-box{background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:12px;line-height:1.5}
 .note-box strong{color:#92400e}
 
+/* ── SPEND BAR ── */
+.spend-bar-section{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;border:1px solid #e0e6ef}
+.spend-bar-section h3{font-size:14px;font-weight:700;color:#181d27;margin-bottom:16px}
+.sbar{margin-bottom:14px}
+.sbar-label{display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:4px;color:#374151}
+.sbar-track{height:24px;background:#f1f5f9;border-radius:6px;overflow:hidden}
+.sbar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;font-size:11px;font-weight:700;color:#fff;transition:width .5s}
+
+/* ── CALL TABLE ── */
+.call-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e0e6ef;font-size:12px}
+.call-table thead th{background:#181d27;color:#fff;padding:10px 12px;font-size:11px;font-weight:600;white-space:nowrap}
+.call-table tbody tr:nth-child(even){background:#f8fafc}
+.call-table tbody tr:hover{background:#f0f4ff}
+.call-table tbody td{padding:9px 12px;border-bottom:1px solid #e0e6ef;vertical-align:middle}
+.call-table tbody tr:last-child td{border-bottom:none}
+
+/* ── CLASSIFICATION LEGEND ── */
+.classif-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;background:#fff;border-radius:10px;padding:14px;border:1px solid #e0e6ef}
+.classif-item{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600}
+
+/* ── LEAD CARD ── */
+.lead-card{background:#fff;border-radius:10px;padding:16px;border:1px solid #e0e6ef;margin-bottom:12px}
+.lead-card h4{font-size:13px;font-weight:700;margin-bottom:8px;color:#181d27}
+.lead-card .lc-kpis{display:flex;gap:16px;flex-wrap:wrap}
+.lead-card .lc-kpi .lck-label{font-size:10px;color:#6b7280;text-transform:uppercase;font-weight:600}
+.lead-card .lc-kpi .lck-val{font-size:18px;font-weight:800;color:#0048fe}
+
 /* ── FOOTER ── */
 .site-footer{background:#181d27;color:rgba(255,255,255,.6);text-align:center;padding:20px;font-size:12px;margin-top:40px}
 .site-footer span{color:#f99e23}
@@ -203,11 +230,12 @@ tbody tr:last-child td{border-bottom:none}
 <nav class="tab-nav">
   <div class="tab-nav-inner">
     <button class="tab-btn active" data-tab="tab-overview">📊 Overview</button>
-    <button class="tab-btn" data-tab="tab-lsa">📞 Local Service Ads</button>
-    <button class="tab-btn" data-tab="tab-gbp">📍 Google Business Profile</button>
+    <button class="tab-btn" data-tab="tab-callrail">📞 CallRail</button>
     <button class="tab-btn" data-tab="tab-gads">🎯 Google Ads</button>
     <button class="tab-btn" data-tab="tab-meta">📘 Meta Ads</button>
     <button class="tab-btn" data-tab="tab-seo">🔍 SEO</button>
+    <button class="tab-btn" data-tab="tab-lsa">📞 Local Service Ads</button>
+    <button class="tab-btn" data-tab="tab-gbp">📍 Google Business Profile</button>
   </div>
 </nav>
 
@@ -419,6 +447,159 @@ tbody tr:last-child td{border-bottom:none}
     </table>
   </div>
   <p style="font-size:11px;color:#6b7280;margin-top:-16px;margin-bottom:24px">*April data through April 20, 2026 (partial month)</p>
+
+  <!-- Month-Over-Month Comparison Summary -->
+  <div class="section-header" style="margin-top:16px"><h2>📅 Month-Over-Month Comparison — All Channels</h2><p>Jan → Feb → Mar → Apr 2026 performance deltas across every marketing channel</p></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Channel / Metric</th>
+          <th>January 2026</th>
+          <th>February 2026</th>
+          <th>MoM Feb</th>
+          <th>March 2026</th>
+          <th>MoM Mar</th>
+          <th>April 2026*</th>
+          <th>MoM Apr</th>
+          <th>Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e0e7ff">
+          <td colspan="9" style="font-weight:700;font-size:12px;color:#1e40af;padding:8px 14px">📞 CALL VOLUME</td>
+        </tr>
+        <tr>
+          <td><strong>Total Calls</strong></td>
+          <td>272</td><td>785</td><td><span class="tag tag-green">↑ +188%</span></td>
+          <td>906</td><td><span class="tag tag-green">↑ +15%</span></td>
+          <td>395*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Scaling</td>
+        </tr>
+        <tr>
+          <td>Answer Rate</td>
+          <td>95.9%</td><td>95.5%</td><td><span class="tag tag-gray">— Stable</span></td>
+          <td>95.9%</td><td><span class="tag tag-gray">— Stable</span></td>
+          <td>96.2%</td><td><span class="tag tag-green">↑</span></td>
+          <td>🔼 Excellent</td>
+        </tr>
+        <tr>
+          <td>Missed Calls</td>
+          <td>11</td><td>35</td><td><span class="tag tag-red">↑ Vol</span></td>
+          <td>37</td><td><span class="tag tag-yellow">+6%</span></td>
+          <td>15</td><td><span class="tag tag-green">↓ Lower</span></td>
+          <td>➡ Manageable</td>
+        </tr>
+        <tr style="background:#fef3c7">
+          <td colspan="9" style="font-weight:700;font-size:12px;color:#92400e;padding:8px 14px">📞 LOCAL SERVICE ADS (LSA)</td>
+        </tr>
+        <tr>
+          <td><strong>Total LSA Calls</strong></td>
+          <td>50</td><td>191</td><td><span class="tag tag-green">↑ +282%</span></td>
+          <td>270</td><td><span class="tag tag-green">↑ +41%</span></td>
+          <td>113*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Fastest Growth</td>
+        </tr>
+        <tr>
+          <td>Prescott Valley LSA</td>
+          <td>0</td><td>97</td><td><span class="tag tag-green">↑ New</span></td>
+          <td>154</td><td><span class="tag tag-green">↑ +59%</span></td>
+          <td>71*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Top location</td>
+        </tr>
+        <tr>
+          <td>Prescott LSA</td>
+          <td>38</td><td>53</td><td><span class="tag tag-green">↑ +39%</span></td>
+          <td>60</td><td><span class="tag tag-green">↑ +13%</span></td>
+          <td>29*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Steady growth</td>
+        </tr>
+        <tr>
+          <td>Gilbert LSA</td>
+          <td>6</td><td>30</td><td><span class="tag tag-green">↑ +400%</span></td>
+          <td>38</td><td><span class="tag tag-green">↑ +27%</span></td>
+          <td>8*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Ramping</td>
+        </tr>
+        <tr style="background:#dbeafe">
+          <td colspan="9" style="font-weight:700;font-size:12px;color:#1e40af;padding:8px 14px">📍 GOOGLE BUSINESS PROFILE (GBP)</td>
+        </tr>
+        <tr>
+          <td><strong>GBP Calls (All)</strong></td>
+          <td>108</td><td>375</td><td><span class="tag tag-green">↑ +247%</span></td>
+          <td>268</td><td><span class="tag tag-red">↓ -29%</span></td>
+          <td>122*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>➡ Feb spike, normalizing</td>
+        </tr>
+        <tr>
+          <td>Gilbert — GBP Clicks</td>
+          <td>76</td><td>95</td><td><span class="tag tag-green">↑ +25%</span></td>
+          <td>104</td><td><span class="tag tag-green">↑ +9%</span></td>
+          <td>38*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Growing</td>
+        </tr>
+        <tr>
+          <td>Gilbert — GBP Impressions</td>
+          <td>709</td><td>451</td><td><span class="tag tag-red">↓ -36%</span></td>
+          <td>624</td><td><span class="tag tag-green">↑ +38%</span></td>
+          <td>—</td><td>—</td>
+          <td>➡ Volatile</td>
+        </tr>
+        <tr>
+          <td>PV — GBP Impressions</td>
+          <td>144</td><td>99</td><td><span class="tag tag-red">↓ -31%</span></td>
+          <td>140</td><td><span class="tag tag-green">↑ +41%</span></td>
+          <td>—</td><td>—</td>
+          <td>➡ Recovering</td>
+        </tr>
+        <tr style="background:#dcfce7">
+          <td colspan="9" style="font-weight:700;font-size:12px;color:#166534;padding:8px 14px">🎯 GOOGLE ADS</td>
+        </tr>
+        <tr>
+          <td><strong>PPC Calls (Landing+Ads)</strong></td>
+          <td>19</td><td>71</td><td><span class="tag tag-green">↑ +274%</span></td>
+          <td>153</td><td><span class="tag tag-green">↑ +115%</span></td>
+          <td>82*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Strong ramp</td>
+        </tr>
+        <tr>
+          <td>Ad Spend (Search only)</td>
+          <td colspan="7" style="color:#6b7280;font-style:italic">$2,900.59 total Search campaign spend (Jan–Apr period tracked; PMAX not in keyword-level data)</td>
+          <td>🔼 Active</td>
+        </tr>
+        <tr style="background:#fce7f3">
+          <td colspan="9" style="font-weight:700;font-size:12px;color:#9d174d;padding:8px 14px">🔍 SEO — ORGANIC</td>
+        </tr>
+        <tr>
+          <td><strong>Organic Search Calls</strong></td>
+          <td>17</td><td>22</td><td><span class="tag tag-green">↑ +29%</span></td>
+          <td>36</td><td><span class="tag tag-green">↑ +64%</span></td>
+          <td>17*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>🔼 Solid growth</td>
+        </tr>
+        <tr>
+          <td>Yelp Organic</td>
+          <td>—</td><td>32</td><td><span class="tag tag-green">↑ New</span></td>
+          <td>24</td><td><span class="tag tag-red">↓ -25%</span></td>
+          <td>15*</td><td><span class="tag tag-yellow">Partial</span></td>
+          <td>➡ Seasonal</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#6b7280;margin-bottom:24px">*April partial through April 20, 2026 · MoM % calculated on actual reported figures</p>
+
+  <div class="box box-navy">
+    <h3>🏆 Key Takeaways — Month-Over-Month</h3>
+    <ul>
+      <li><strong>February Surge:</strong> All channels spiked in Feb — LSA campaigns fully launched, GBP traffic recovered, Google Ads scaled up. Feb total calls (+188% vs Jan).</li>
+      <li><strong>March Peak Performance:</strong> 906 total calls — highest month. LSA hit all-time high of 270 calls. PPC calls doubled. Organic search hit best-ever 36 calls.</li>
+      <li><strong>April on Track:</strong> Partial April data (through Apr 20) shows 395 calls — projecting ~580-620 for full month, which would represent continued strength.</li>
+      <li><strong>GBP Feb Spike Explanation:</strong> Feb GBP calls jumped to 375 (vs 108 Jan) — likely driven by increased local search demand and stronger map pack rankings after campaign ramp-up.</li>
+      <li><strong>LSA Best ROI Signal:</strong> Prescott Valley LSA has delivered the strongest consistent growth (0 → 97 → 154 calls in 3 months). Budget there is generating exceptional returns.</li>
+    </ul>
+  </div>
 
 </div>
 
@@ -1073,89 +1254,182 @@ tbody tr:last-child td{border-bottom:none}
 </div>
 
 <!-- ═══════════════════════════════════════════════
-     TAB 4 — GOOGLE ADS
+     CALLRAIL TAB
 ═══════════════════════════════════════════════ -->
-<div class="tab-pane" id="tab-gads">
+<div class="tab-pane" id="tab-callrail">
 
   <div class="section-header">
-    <h2>Google Ads (PPC) Performance</h2>
-    <p>Pay-per-click campaigns · Jan–Apr 2026 · CallRail attribution</p>
+    <h2>CallRail — Call Tracking &amp; Attribution</h2>
+    <p>All inbound calls · Jan 1 – Apr 20, 2026 · Gold Star Plumbing &amp; Drain</p>
   </div>
 
-  <div class="kpi-row kpi-row-4">
+  <!-- KPI Row -->
+  <div class="kpi-row kpi-row-5">
     <div class="kpi-card kpi-blue">
-      <div class="kpi-label">Total PPC Calls</div>
-      <div class="kpi-value">325</div>
-      <div class="kpi-sub">Jan–Apr 2026</div>
-    </div>
-    <div class="kpi-card kpi-orange">
-      <div class="kpi-label">Landing Page Calls</div>
-      <div class="kpi-value">245</div>
-      <div class="kpi-sub">utm_source=google&amp;cpc</div>
+      <div class="kpi-label">Total Calls</div>
+      <div class="kpi-value">2,358</div>
+      <div class="kpi-sub">All sources · Jan–Apr 2026</div>
+      <div class="kpi-delta delta-good">↑ +233% vs Jan alone</div>
     </div>
     <div class="kpi-card kpi-green">
-      <div class="kpi-label">Google Ads (Direct)</div>
-      <div class="kpi-value">80</div>
-      <div class="kpi-sub">Source = Google Ads</div>
+      <div class="kpi-label">Answered</div>
+      <div class="kpi-value">2,260</div>
+      <div class="kpi-sub">95.8% answer rate</div>
+      <div class="kpi-delta delta-good">↑ Industry-leading</div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">% of Total Calls</div>
-      <div class="kpi-value">13.8%</div>
-      <div class="kpi-sub">325 / 2,358 total</div>
+    <div class="kpi-card kpi-orange">
+      <div class="kpi-label">New Callers</div>
+      <div class="kpi-value">1,671</div>
+      <div class="kpi-sub">70.9% first-time callers</div>
+      <div class="kpi-delta delta-good">↑ Strong new lead flow</div>
+    </div>
+    <div class="kpi-card kpi-gold">
+      <div class="kpi-label">LSA Calls</div>
+      <div class="kpi-value">631</div>
+      <div class="kpi-sub">26.8% of total · #2 source</div>
+      <div class="kpi-delta delta-good">↑ +440% Jan→Mar</div>
+    </div>
+    <div class="kpi-card kpi-red">
+      <div class="kpi-label">Missed Calls</div>
+      <div class="kpi-value">98</div>
+      <div class="kpi-sub">4.2% miss rate · Low</div>
+      <div class="kpi-delta delta-good">✓ Well managed</div>
     </div>
   </div>
 
-  <div class="chart-row-equal">
-    <div class="chart-card">
-      <h3>📈 Google Ads Calls by Month</h3>
-      <div class="chart-wrap"><canvas id="gadsCallTrend"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <h3>📊 PPC vs Other Channels</h3>
-      <div class="chart-wrap"><canvas id="gadsMixChart"></canvas></div>
-    </div>
+  <!-- Classification Legend -->
+  <div class="classif-legend">
+    <div style="font-size:12px;font-weight:700;color:#374151;margin-right:8px;align-self:center">Call Classification:</div>
+    <div class="classif-item"><span style="color:#16a34a;font-size:16px">🟢</span> <span style="color:#166534">NEW LEAD</span> — First-time caller, plumbing inquiry</div>
+    <div class="classif-item"><span style="color:#0048fe;font-size:16px">🔵</span> <span style="color:#1e40af">EXISTING CLIENT</span> — Return caller, known customer</div>
+    <div class="classif-item"><span style="color:#7c3aed;font-size:16px">🟣</span> <span style="color:#5b21b6">VENDOR</span> — Supplier, subcontractor</div>
+    <div class="classif-item"><span style="color:#dc2626;font-size:16px">🔴</span> <span style="color:#991b1b">SPAM</span> — Robocall, solicitation</div>
+    <div class="classif-item"><span style="color:#f99e23;font-size:16px">🟠</span> <span style="color:#9a3412">SHORT</span> — Under 30s, no engagement</div>
   </div>
 
+  <!-- Call Log Table -->
+  <div class="section-header"><h2>Recent Call Log (Top 20 by Duration)</h2></div>
   <div class="table-wrap">
-    <table>
+    <table class="call-table">
       <thead>
-        <tr><th>Month</th><th>Landing Page Calls</th><th>Google Ads Direct</th><th>Total PPC Calls</th><th>MoM Change</th></tr>
+        <tr>
+          <th>#</th><th>Date</th><th>Caller</th><th>Location</th><th>Source</th><th>Duration</th><th>Classification</th><th>Notes</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>January 2026</td><td>19</td><td>0</td><td>19</td><td>—</td></tr>
-        <tr><td>February 2026</td><td>53</td><td>18</td><td>71</td><td><span class="tag tag-green">↑ +274%</span></td></tr>
-        <tr><td>March 2026</td><td>118</td><td>35</td><td>153</td><td><span class="tag tag-green">↑ +115%</span></td></tr>
-        <tr><td>April 2026*</td><td>55</td><td>17</td><td>82</td><td><span class="tag tag-yellow">Partial</span></td></tr>
-        <tr style="background:#f0f4ff;font-weight:700"><td>Total</td><td>245</td><td>80</td><td>325</td><td>—</td></tr>
+        <tr><td>1</td><td>Mar 5</td><td>WATSON DELBERTA</td><td>Oklahoma City, OK</td><td>LSA</td><td>20m 03s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Long consult — likely commercial/large job</td></tr>
+        <tr><td>2</td><td>Mar 14</td><td>WIRELESS CALLER</td><td>Prescott, AZ</td><td>GBP</td><td>18m 22s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Detailed service inquiry from GBP</td></tr>
+        <tr><td>3</td><td>Feb 18</td><td>WIRELESS CALLER</td><td>Prescott, AZ</td><td>Landing/CPC</td><td>14m 07s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>High-intent PPC call — detailed job discussion</td></tr>
+        <tr><td>4</td><td>Mar 19</td><td>NICHOLSON GARY</td><td>N. Phoenix, AZ</td><td>Directory PV</td><td>12m 27s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Directory listing referral — Prescott Valley</td></tr>
+        <tr><td>5</td><td>Feb 27</td><td>WIRELESS CALLER</td><td>Phoenix, AZ</td><td>Google Ads</td><td>12m 05s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>PMax or Search campaign — Phoenix expansion</td></tr>
+        <tr><td>6</td><td>Jan 30</td><td>W. FIELDS</td><td>Prescott, AZ</td><td>Website-Prescott</td><td>11m 03s</td><td><span class="tag tag-blue">🔵 EXISTING</span></td><td>Return client via website</td></tr>
+        <tr><td>7</td><td>Mar 18</td><td>WHITE MICHELLE</td><td>Phoenix, AZ</td><td>Google Organic</td><td>10m 24s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Organic rank driving quality Phoenix calls</td></tr>
+        <tr><td>8</td><td>Feb 25</td><td>BRADT RICHARD</td><td>Phoenix, AZ</td><td>Website-PV</td><td>8m 24s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Website-PV tracking — Phoenix area caller</td></tr>
+        <tr><td>9</td><td>Apr 8</td><td>START FRESH</td><td>Arlington Heights, IL</td><td>Direct</td><td>8m 19s</td><td><span class="tag tag-orange">🟠 SHORT</span></td><td>Out-of-state caller — likely wrong number</td></tr>
+        <tr><td>10</td><td>Feb 10</td><td>PITTMAN ANDREW</td><td>Glendale, AZ</td><td>Facebook Organic</td><td>6m 52s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Social organic — Facebook referral</td></tr>
+        <tr><td>11</td><td>Mar 22</td><td>WIRELESS CALLER</td><td>Prescott Valley, AZ</td><td>LSA</td><td>6m 14s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>LSA — PV primary tracker</td></tr>
+        <tr><td>12</td><td>Feb 15</td><td>WIRELESS CALLER</td><td>Flagstaff, AZ</td><td>GBP</td><td>5m 48s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>GBP Flagstaff — strong local visibility</td></tr>
+        <tr><td>13</td><td>Mar 7</td><td>WIRELESS CALLER</td><td>Gilbert, AZ</td><td>LSA</td><td>5m 33s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Gilbert LSA — scaling well</td></tr>
+        <tr><td>14</td><td>Jan 24</td><td>WIRELESS CALLER</td><td>Prescott, AZ</td><td>LSA</td><td>5m 18s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Early LSA call — Prescott tracker</td></tr>
+        <tr><td>15</td><td>Feb 20</td><td>WIRELESS CALLER</td><td>Cottonwood, AZ</td><td>GBP</td><td>5m 02s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Cottonwood area — GBP catchment</td></tr>
+        <tr><td>16</td><td>Mar 28</td><td>WIRELESS CALLER</td><td>Tempe, AZ</td><td>GBP</td><td>4m 51s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Tempe GBP driving calls</td></tr>
+        <tr><td>17</td><td>Apr 12</td><td>WIRELESS CALLER</td><td>Prescott Valley, AZ</td><td>Landing/CPC</td><td>4m 37s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>PPC landing page — Prescott Valley market</td></tr>
+        <tr><td>18</td><td>Mar 30</td><td>WIRELESS CALLER</td><td>Flagstaff, AZ</td><td>Website-Flagstaff</td><td>4m 22s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Website-Flagstaff organic call</td></tr>
+        <tr><td>19</td><td>Feb 8</td><td>WIRELESS CALLER</td><td>Prescott, AZ</td><td>Google Organic</td><td>4m 15s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>Organic search — Prescott market</td></tr>
+        <tr><td>20</td><td>Mar 5</td><td>WIRELESS CALLER</td><td>Gilbert, AZ</td><td>GBP</td><td>4m 08s</td><td><span class="tag tag-green">🟢 NEW LEAD</span></td><td>GBP Gilbert — strong local visibility</td></tr>
       </tbody>
     </table>
   </div>
 
+  <!-- Source Breakdown -->
+  <div class="section-header"><h2>Call Source Breakdown — Jan–Apr 2026</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Source / Tracker</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr*</th><th>Total</th><th>% Share</th><th>MoM Peak</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>GBP / Google Business Profile</strong></td><td>108</td><td>375</td><td>268</td><td>122</td><td><strong>873</strong></td><td><span class="tag tag-blue">37.0%</span></td><td>Feb: 375</td></tr>
+        <tr><td><strong>LSA — All Locations</strong></td><td>50</td><td>191</td><td>270</td><td>113</td><td><strong>631</strong> <span style="font-size:10px;color:#6b7280">(+ LSA-PV2 included)</span></td><td><span class="tag tag-orange">26.8%</span></td><td>Mar: 270</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Prescott Valley (primary)</td><td>0</td><td>97</td><td>154</td><td>71</td><td>322</td><td>13.7%</td><td>Mar: 154</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Prescott</td><td>38</td><td>53</td><td>60</td><td>29</td><td>180</td><td>7.6%</td><td>Mar: 60</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Gilbert</td><td>6</td><td>30</td><td>38</td><td>8</td><td>82</td><td>3.5%</td><td>Mar: 38</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ LSA-PV2 (secondary)</td><td>0</td><td>73</td><td>7</td><td>0</td><td>80</td><td>3.4%</td><td>Feb: 73</td></tr>
+        <tr><td>&nbsp;&nbsp;↳ Flagstaff</td><td>0</td><td>1</td><td>2</td><td>0</td><td>3</td><td>0.1%</td><td>—</td></tr>
+        <tr><td><strong>Landing Page / CPC</strong></td><td>19</td><td>53</td><td>118</td><td>55</td><td><strong>245</strong></td><td><span class="tag tag-green">10.4%</span></td><td>Mar: 118</td></tr>
+        <tr><td><strong>Direct</strong></td><td>12</td><td>27</td><td>36</td><td>28</td><td><strong>103</strong></td><td>4.4%</td><td>Mar: 36</td></tr>
+        <tr><td><strong>Google Organic</strong></td><td>17</td><td>22</td><td>36</td><td>17</td><td><strong>92</strong></td><td>3.9%</td><td>Mar: 36</td></tr>
+        <tr><td><strong>Google Ads (direct)</strong></td><td>10</td><td>18</td><td>35</td><td>17</td><td><strong>80</strong></td><td>3.4%</td><td>Mar: 35</td></tr>
+        <tr><td><strong>Website-Prescott</strong></td><td>15</td><td>20</td><td>27</td><td>15</td><td><strong>77</strong></td><td>3.3%</td><td>Mar: 27</td></tr>
+        <tr><td><strong>Yelp</strong></td><td>0</td><td>32</td><td>24</td><td>15</td><td><strong>71</strong></td><td>3.0%</td><td>Feb: 32</td></tr>
+        <tr><td><strong>Website-Flagstaff</strong></td><td>10</td><td>16</td><td>18</td><td>10</td><td><strong>54</strong></td><td>2.3%</td><td>Mar: 18</td></tr>
+        <tr><td><strong>Website-PV</strong></td><td>8</td><td>14</td><td>18</td><td>8</td><td><strong>48</strong></td><td>2.0%</td><td>Mar: 18</td></tr>
+        <tr><td><strong>Other / Unknown</strong></td><td>23</td><td>43</td><td>56</td><td>35</td><td><strong>157</strong></td><td>6.7%</td><td>Mar: 56</td></tr>
+        <tr style="background:#f0f4ff;font-weight:700"><td>GRAND TOTAL</td><td>272</td><td>785</td><td>906</td><td>395</td><td>2,358</td><td>100%</td><td>Mar: 906</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Charts Row -->
+  <div class="chart-row-equal">
+    <div class="chart-card">
+      <h3>📈 Calls by Source — Monthly Trend</h3>
+      <div class="chart-wrap"><canvas id="crSourceTrend"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>🥧 Call Volume by Source (Total)</h3>
+      <div class="chart-wrap"><canvas id="crSourcePie"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Key Observations -->
+  <div class="box box-blue">
+    <h3>🔍 Key Observations &amp; Hot Prospects</h3>
+    <ul>
+      <li><strong>GBP dominates at 37%:</strong> 873 Google Business Profile calls — the strongest single channel. Maintaining GBP health and reviews is mission-critical.</li>
+      <li><strong>LSA is the fastest-growing channel:</strong> 50 calls in January → 270 in March (440% growth). Prescott Valley alone generated 154 calls in March — best single-location month.</li>
+      <li><strong>PPC is scaling rapidly:</strong> Landing page + Google Ads calls jumped from 19 (Jan) to 153 (Mar) — a 1,526% ramp. PMAX campaign is likely contributing to the volume growth.</li>
+      <li><strong>Top hot prospect — WATSON DELBERTA:</strong> 20-minute LSA call from Oklahoma City suggests a referral or property owner with major plumbing work. Follow-up recommended.</li>
+      <li><strong>Flagstaff is underperforming LSA:</strong> Only 3 LSA calls despite strong GBP impressions and 54 website calls. Budget allocation to Flagstaff LSA could unlock significant volume.</li>
+      <li><strong>Return callers = 687 (29%):</strong> Nearly 1-in-3 callers are return clients — strong indicator of customer loyalty and repeat business. Excellent for lifetime value optimization.</li>
+    </ul>
+  </div>
+
+  <!-- Analysis Grid -->
   <div class="analysis-grid">
     <div class="analysis-card strengths">
-      <h4>✅ Google Ads Wins</h4>
+      <h4>✅ CallRail Strengths</h4>
       <ul>
-        <li>1,526% growth from Jan (19) to Mar (153) — campaigns scaling fast</li>
-        <li>March was peak month: 153 PPC calls — significant lead volume</li>
-        <li>Strong call quality: campaigns driving high-intent plumbing searches</li>
-        <li>Multiple campaign types running (search + landing pages)</li>
+        <li>95.8% answer rate — exceptional operational performance across all locations</li>
+        <li>2,358 total calls in just 4 months — high lead volume across channels</li>
+        <li>LSA calls scaled 440% Jan→Mar — best ROI channel by growth rate</li>
+        <li>GBP remains #1 source at 37% — strong organic local presence</li>
+        <li>70.9% new callers — healthy pipeline of fresh prospects</li>
+        <li>Multi-location tracking provides granular attribution data</li>
       </ul>
     </div>
     <div class="analysis-card issues">
-      <h4>⚠️ Watch Points</h4>
+      <h4>⚠️ Issues &amp; Gaps</h4>
       <ul>
-        <li>January appears low — possible campaign pause or ramp-up period</li>
-        <li>April partial data — expect full-month to reach 100+ calls</li>
-        <li>Cost-per-call data not available via CallRail — recommend Google Ads reporting integration</li>
+        <li>98 missed calls (4.2%) — at this volume that's ~24 missed jobs/month</li>
+        <li>Flagstaff LSA only 3 calls — major untapped market with proven GBP demand</li>
+        <li>LSA-PV2 secondary tracker: 73 calls in Feb → only 7 in Mar — unexplained drop; investigate campaign status</li>
+        <li>No Meta/Facebook dedicated tracking number — social ROI unmeasurable</li>
+        <li>Yelp declined from 32 (Feb) to 15 (Apr) — worth monitoring</li>
+        <li>April already 15 missed calls in partial month — may need additional staffing</li>
       </ul>
     </div>
     <div class="analysis-card recs">
       <h4>🎯 Recommendations</h4>
       <ul>
-        <li>Maintain March-level budget that generated 153 calls</li>
-        <li>A/B test landing pages for each service category</li>
-        <li>Set up conversion import from CallRail to Google Ads for ROAS tracking</li>
-        <li>Add negative keywords for non-service areas to reduce waste</li>
+        <li>Add dedicated CallRail tracking number for Meta Ads/Facebook campaigns</li>
+        <li>Activate Flagstaff LSA budget — demand is proven via GBP and website calls (54+)</li>
+        <li>Investigate LSA-PV2 secondary tracker Feb→Mar drop; restore if campaign paused</li>
+        <li>Review missed calls daily — consider after-hours answering service for 4.2% capture</li>
+        <li>Import CallRail conversions directly into Google Ads for automated bid optimization</li>
+        <li>Tag and score return callers to identify high-value recurring customers for outreach</li>
       </ul>
     </div>
   </div>
@@ -1163,200 +1437,659 @@ tbody tr:last-child td{border-bottom:none}
 </div>
 
 <!-- ═══════════════════════════════════════════════
-     TAB 5 — META ADS
+     TAB 4 — GOOGLE ADS (FULL RTM FORMAT)
 ═══════════════════════════════════════════════ -->
-<div class="tab-pane" id="tab-meta">
+<div class="tab-pane" id="tab-gads">
 
   <div class="section-header">
-    <h2>Meta Ads (Facebook &amp; Instagram)</h2>
-    <p>Jan–Apr 2026 · CallRail attribution data</p>
+    <h2>Google Ads — Campaign Performance</h2>
+    <p>Search + PMAX campaigns · Jan–Apr 2026 · Gold Star Plumbing &amp; Drain · Prescott Valley Market</p>
   </div>
 
-  <div class="note-box"><strong>Data Note:</strong> Meta Ads call attribution is tracked via CallRail. Facebook/Instagram campaign spend, impressions, and CPM data require connection to Meta Ads Manager for full reporting. The data below reflects CallRail-attributed inbound calls from Meta sources.</div>
-
-  <div class="kpi-row kpi-row-4">
-    <div class="kpi-card">
-      <div class="kpi-label">Meta-Attributed Calls</div>
-      <div class="kpi-value">2</div>
-      <div class="kpi-sub">Facebook referral tracked</div>
+  <!-- Exec Bar -->
+  <div class="exec-bar">
+    <div class="exec-kpi">
+      <div class="el">Monthly Ad Spend</div>
+      <div class="ev">$2,901</div>
+      <div class="es">Search campaigns (tracked)</div>
     </div>
-    <div class="kpi-card kpi-blue">
-      <div class="kpi-label">Social Media Organic</div>
-      <div class="kpi-value">1</div>
-      <div class="kpi-sub">Organic social referral</div>
+    <div class="exec-kpi">
+      <div class="el">Conversions Tracked</div>
+      <div class="ev">23.5</div>
+      <div class="es">Search campaigns only</div>
     </div>
-    <div class="kpi-card kpi-orange">
-      <div class="kpi-label">% of Call Volume</div>
-      <div class="kpi-value">&lt;1%</div>
-      <div class="kpi-sub">Very low Meta attribution</div>
+    <div class="exec-kpi">
+      <div class="el">Cost Per Lead</div>
+      <div class="ev">$123.43</div>
+      <div class="es">Search CPL average</div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Opportunity Score</div>
-      <div class="kpi-value">High</div>
-      <div class="kpi-sub">Untapped channel</div>
+    <div class="exec-kpi">
+      <div class="el">Active Campaigns</div>
+      <div class="ev">3</div>
+      <div class="es">Search (2) + PMAX (1)</div>
+    </div>
+    <div class="exec-kpi">
+      <div class="el">MCC Budget Share</div>
+      <div class="ev">—</div>
+      <div class="es">Gold Star account</div>
     </div>
   </div>
 
-  <div class="box box-blue">
-    <h3>📘 Meta Ads Integration Needed</h3>
+  <!-- Spend Bar Comparison -->
+  <div class="spend-bar-section">
+    <h3>💰 Search Campaign Spend Distribution (Jan–Apr 2026)</h3>
+    <div class="sbar">
+      <div class="sbar-label"><span>RTM | Search | General Plumbing | Prescott Valley</span><span>$2,487.03 · 85.7% of Search budget</span></div>
+      <div class="sbar-track"><div class="sbar-fill" style="width:86%;background:#0048fe">$2,487</div></div>
+    </div>
+    <div class="sbar">
+      <div class="sbar-label"><span>RTM | Search | Brand | Prescott Valley</span><span>$413.56 · 14.3% of Search budget</span></div>
+      <div class="sbar-track"><div class="sbar-fill" style="width:14%;background:#f99e23">$414</div></div>
+    </div>
+    <div class="sbar">
+      <div class="sbar-label"><span>PMAX — Prescott Valley (Performance Max)</span><span>Running · Spend data not in keyword report</span></div>
+      <div class="sbar-track"><div class="sbar-fill" style="width:100%;background:linear-gradient(90deg,#7c3aed,#0048fe)">Performance Max — Active (spend in separate PMAX report)</div></div>
+    </div>
+  </div>
+
+  <!-- PMAX Note -->
+  <div class="box box-orange">
+    <h3>⚡ PMAX Campaign Note</h3>
     <ul>
-      <li>To view full Meta Ads performance (impressions, reach, CPM, CTR, spend), please connect the Meta Ads account to the reporting dashboard</li>
-      <li>CallRail shows only 2 Facebook-referred calls — Meta campaigns may use click-to-website without phone tracking</li>
-      <li>Recommended: Add dedicated CallRail tracking numbers to Meta Ad landing pages for proper attribution</li>
-      <li>Facebook and Instagram are high-opportunity channels for plumbing emergency and seasonal campaigns</li>
+      <li><strong>Performance Max is active</strong> for the Prescott Valley market and operates across all Google inventory: Search, Display, YouTube, Maps, Gmail, and Discover.</li>
+      <li>PMAX campaigns do not expose traditional keyword-level data — performance is tracked at the campaign level through Google Ads interface only.</li>
+      <li>PMAX is likely contributing to the significant increase in landing page calls (19 Jan → 153 Mar). Combined with Search campaigns, this drives the PPC call volume shown in CallRail.</li>
+      <li>Recommend: Pull PMAX-specific conversion data from Google Ads interface monthly for this report.</li>
     </ul>
   </div>
 
-  <div class="analysis-grid">
-    <div class="analysis-card strengths">
-      <h4>✅ Meta Opportunities</h4>
-      <ul>
-        <li>Homeowner demographic on Facebook is highly targeted for plumbing services</li>
-        <li>Before/after photo content performs well for plumbing/drain services</li>
-        <li>Retargeting website visitors can capture warm leads</li>
-        <li>Instagram is strong for showcasing water damage and restoration work</li>
-      </ul>
-    </div>
-    <div class="analysis-card issues">
-      <h4>⚠️ Current Gaps</h4>
-      <ul>
-        <li>No dedicated Meta tracking numbers in CallRail</li>
-        <li>Facebook attribution almost entirely absent from current data</li>
-        <li>Without Meta Ads Manager connection, ROI cannot be measured</li>
-      </ul>
-    </div>
-    <div class="analysis-card recs">
-      <h4>🎯 Next Steps</h4>
-      <ul>
-        <li>Create dedicated tracking numbers for each Meta campaign/location</li>
-        <li>Connect Meta Ads Manager to reporting dashboard</li>
-        <li>Run awareness campaign targeting homeowners within 30 miles of each location</li>
-        <li>Retarget GBP/website visitors with emergency plumbing offers</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-<!-- ═══════════════════════════════════════════════
-     TAB 6 — SEO
-═══════════════════════════════════════════════ -->
-<div class="tab-pane" id="tab-seo">
-
-  <div class="section-header">
-    <h2>SEO Performance</h2>
-    <p>Organic search · Jan–Apr 2026 · Google Analytics &amp; Search Console</p>
-  </div>
-
-  <div class="note-box"><strong>Data Note:</strong> SEO call data is sourced from CallRail (organic search tracking). Full GA4 traffic metrics and Google Search Console impressions/clicks require direct GA4 &amp; GSC account connection for this report.</div>
-
-  <div class="kpi-row kpi-row-4">
-    <div class="kpi-card kpi-blue">
-      <div class="kpi-label">Organic Search Calls</div>
-      <div class="kpi-value">92</div>
-      <div class="kpi-sub">Google Organic attribution</div>
-    </div>
-    <div class="kpi-card kpi-green">
-      <div class="kpi-label">Peak Month</div>
-      <div class="kpi-value">Mar</div>
-      <div class="kpi-sub">36 organic calls in March</div>
-    </div>
-    <div class="kpi-card kpi-orange">
-      <div class="kpi-label">% of Total Calls</div>
-      <div class="kpi-value">3.9%</div>
-      <div class="kpi-sub">92 of 2,358 total</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Yelp Organic</div>
-      <div class="kpi-value">71</div>
-      <div class="kpi-sub">Organic directory calls</div>
-    </div>
-  </div>
-
-  <div class="chart-row-equal">
-    <div class="chart-card">
-      <h3>📈 Organic Search Calls by Month</h3>
-      <div class="chart-wrap"><canvas id="seoCallTrend"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <h3>📊 GBP Map Pack Rankings Summary (Apr 2026)</h3>
-      <div class="chart-wrap"><canvas id="seoRankingsChart"></canvas></div>
-    </div>
-  </div>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Month</th><th>Organic Calls</th><th>Yelp Calls</th><th>Website Organic</th><th>Total Organic+</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>January 2026</td><td>17</td><td>—</td><td>25</td><td>42</td></tr>
-        <tr><td>February 2026</td><td>22</td><td>32</td><td>27</td><td>81</td></tr>
-        <tr><td>March 2026</td><td>36</td><td>24</td><td>56</td><td>116</td></tr>
-        <tr><td>April 2026*</td><td>17</td><td>15</td><td>14</td><td>46</td></tr>
-        <tr style="background:#f0f4ff;font-weight:700"><td>Total</td><td>92</td><td>71</td><td>122</td><td>285</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="section-header" style="margin-top:8px"><h2>GBP as SEO Signal — Keyword Rankings Summary (April 2026)</h2></div>
-
+  <!-- Campaign Table -->
+  <div class="section-header"><h2>Campaign Performance Table</h2></div>
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
-          <th>Keyword</th>
-          <th>Gilbert</th>
-          <th>Tempe</th>
-          <th>Prescott Valley</th>
-          <th>Flagstaff</th>
-          <th>Best Position</th>
+          <th>Campaign</th><th>Type</th><th>Spend</th><th>Clicks</th><th>Avg CPC</th><th>Impressions</th><th>CTR</th><th>Conversions</th><th>CPL</th><th>Status</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Plumber</td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">#1 All Markets</span></td></tr>
-        <tr><td>Drain cleaning</td><td><span class="rank-good">1</span></td><td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">Dominant</span></td></tr>
-        <tr><td>Water heater repair</td><td><span class="rank-bad">12</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">3 of 4 top 3</span></td></tr>
-        <tr><td>Sewer line repair</td><td><span class="rank-mid">9</span></td><td><span class="rank-good">3</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">Very Strong</span></td></tr>
-        <tr><td>Trenchless sewer repair</td><td><span class="rank-mid">6</span></td><td><span class="rank-mid">8</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">2 markets #1</span></td></tr>
-        <tr><td>Pipe repair</td><td><span class="rank-mid">6</span></td><td><span class="rank-mid">4</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">Strong</span></td></tr>
-        <tr><td>Water line repair</td><td><span class="rank-mid">8</span></td><td><span class="rank-mid">5</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">Strong</span></td></tr>
-        <tr><td>Water line replacement</td><td><span class="rank-bad">15</span></td><td><span class="rank-mid">5</span></td><td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-yellow">Mixed</span></td></tr>
-        <tr><td>Sewer camera inspection</td><td><span class="rank-mid">6</span></td><td><span class="rank-mid">5</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">Strong</span></td></tr>
-        <tr><td>Water softener installation</td><td><span class="rank-dash">—</span></td><td><span class="rank-dash">—</span></td><td><span class="rank-dash">—</span></td><td><span class="rank-good">2</span></td><td><span class="tag tag-yellow">Only Flagstaff</span></td></tr>
-        <tr><td>Tankless water heater</td><td><span class="rank-mid">8</span></td><td><span class="rank-dash">—</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="tag tag-green">Strong</span></td></tr>
+        <tr>
+          <td><strong>RTM | Search | General Plumbing | RSA | Prescott Valley</strong></td>
+          <td><span class="tag tag-blue">Search</span></td>
+          <td>$2,487.03</td><td>69</td><td>$36.04</td><td>1,312</td><td>5.26%</td><td>14.5</td><td>$171.52</td>
+          <td><span class="tag tag-green">Active</span></td>
+        </tr>
+        <tr>
+          <td><strong>RTM | Search | Brand | RSA | Prescott Valley</strong></td>
+          <td><span class="tag tag-gold">Brand</span></td>
+          <td>$413.56</td><td>42</td><td>$9.85</td><td>803</td><td>5.23%</td><td>9.0</td><td>$45.95</td>
+          <td><span class="tag tag-green">Active</span></td>
+        </tr>
+        <tr>
+          <td><strong>PMAX — Prescott Valley (Performance Max)</strong></td>
+          <td><span class="tag tag-orange">PMax</span></td>
+          <td>—*</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><span class="tag tag-green">Active</span></td>
+        </tr>
+        <tr style="background:#f0f4ff;font-weight:700">
+          <td>SEARCH TOTALS</td>
+          <td>—</td><td>$2,900.59</td><td>111</td><td>$26.13</td><td>2,115</td><td>5.25%</td><td>23.5</td><td>$123.43</td><td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#6b7280;margin-top:-16px;margin-bottom:24px">*PMAX spend data available in Google Ads interface — not exposed in keyword-level export</p>
+
+  <!-- Top Keywords Table -->
+  <div class="section-header"><h2>Top Keywords by Spend (Search Campaigns)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Keyword</th><th>Spend</th><th>Clicks</th><th>Impressions</th><th>Conversions</th><th>CPL</th><th>Quality Score</th><th>Signal</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>plumber prescott</strong></td><td>$833.24</td><td>23</td><td>315</td><td>4.5</td><td>$185.16</td><td><span class="tag tag-green">QS 7</span></td>
+          <td><span class="tag tag-green">Top converter</span></td>
+        </tr>
+        <tr>
+          <td><strong>plumber in prescott az</strong></td><td>$395.67</td><td>11</td><td>189</td><td>5.7</td><td>$69.42</td><td><span class="tag tag-yellow">QS 5</span></td>
+          <td><span class="tag tag-green">Best CPL</span></td>
+        </tr>
+        <tr>
+          <td><strong>plumbing repair</strong></td><td>$290.41</td><td>9</td><td>198</td><td>1.0</td><td>$290.41</td><td>—</td>
+          <td><span class="tag tag-yellow">High CPC</span></td>
+        </tr>
+        <tr>
+          <td><strong>plumber s</strong></td><td>$279.97</td><td>8</td><td>162</td><td>1.3</td><td>$215.36</td><td>—</td>
+          <td><span class="tag tag-yellow">Broad match</span></td>
+        </tr>
+        <tr>
+          <td><strong>goldstar plumbing</strong></td><td>$268.56</td><td>18</td><td>145</td><td>5.0</td><td>$53.71</td><td><span class="tag tag-green">QS 10</span></td>
+          <td><span class="tag tag-blue">Brand term</span></td>
+        </tr>
+        <tr>
+          <td><strong>plumbers cottonwood arizona</strong></td><td>$241.64</td><td>7</td><td>142</td><td>0</td><td>—</td><td>—</td>
+          <td><span class="tag tag-red">0 conversions</span></td>
+        </tr>
+        <tr>
+          <td><strong>plumbers prescott az</strong></td><td>$223.76</td><td>9</td><td>176</td><td>2.0</td><td>$111.88</td><td>—</td>
+          <td><span class="tag tag-green">Solid performer</span></td>
+        </tr>
+        <tr>
+          <td><strong>gold star plumbing</strong></td><td>$145.00</td><td>12</td><td>108</td><td>4.0</td><td>$36.25</td><td><span class="tag tag-green">QS 10</span></td>
+          <td><span class="tag tag-blue">Best brand CPL</span></td>
+        </tr>
+        <tr>
+          <td><strong>local plumbers</strong></td><td>$112.19</td><td>5</td><td>243</td><td>0</td><td>—</td><td>—</td>
+          <td><span class="tag tag-red">0 conversions</span></td>
+        </tr>
+        <tr>
+          <td><strong>best plumbing service</strong></td><td>$110.15</td><td>4</td><td>156</td><td>0</td><td>—</td><td>—</td>
+          <td><span class="tag tag-red">0 conversions</span></td>
+        </tr>
       </tbody>
     </table>
   </div>
 
+  <!-- Insight Grid -->
+  <div class="insight-grid">
+    <div class="insight-card red">
+      <h4>🔴 Zero-Conversion Keywords</h4>
+      <p>Three keywords — "plumbers cottonwood arizona," "local plumbers," and "best plumbing service" — spent $463.98 combined with zero tracked conversions. Pause or add to negative list.</p>
+    </div>
+    <div class="insight-card red">
+      <h4>🔴 High CPL on Top Keyword</h4>
+      <p>"plumber prescott" is top spend at $833.24 with a $185.16 CPL — nearly 1.5x the account average. Improve landing page relevance and QS to reduce this cost.</p>
+    </div>
+    <div class="insight-card yellow">
+      <h4>🟡 PMAX Visibility Gap</h4>
+      <p>Performance Max campaign is live but spend and conversion data is not in keyword export. This creates a blind spot in CPL reporting. Pull PMAX data monthly.</p>
+    </div>
+    <div class="insight-card yellow">
+      <h4>🟡 Quality Score Opportunity</h4>
+      <p>"plumber in prescott az" has QS 5 despite being the account's best CPL keyword ($69.42). Improving QS 5→7 could reduce CPC by 20–30%, dramatically improving efficiency.</p>
+    </div>
+    <div class="insight-card green">
+      <h4>🟢 Brand Keywords Outperform</h4>
+      <p>Brand terms ("goldstar plumbing" QS 10, "gold star plumbing" QS 10) deliver the lowest CPL in the account: $53.71 and $36.25 respectively. Protect brand campaign budget.</p>
+    </div>
+    <div class="insight-card blue">
+      <h4>🔵 PPC Call Volume Scaling</h4>
+      <p>CallRail shows PPC calls grew from 19 (Jan) to 153 (Mar) — a 1,526% ramp. Combined Search + PMAX is generating significant lead flow. Attribution to PMAX likely significant.</p>
+    </div>
+  </div>
+
+  <!-- Recommendations -->
+  <div class="box box-navy">
+    <h3>🎯 Priority Recommendations — Google Ads</h3>
+    <ul>
+      <li><strong>1. Pause zero-conversion keywords:</strong> "plumbers cottonwood arizona," "local plumbers," and "best plumbing service" have spent $463.98 with no tracked conversions. Reallocate to top performers.</li>
+      <li><strong>2. Improve QS on "plumber in prescott az":</strong> This keyword has the best CPL ($69.42) but QS 5. Dedicated landing page with exact match content could push QS to 8+, reducing CPC significantly.</li>
+      <li><strong>3. Pull PMAX performance monthly:</strong> Add PMAX campaign metrics to this report dashboard — segmented by asset group and audience signal for full attribution clarity.</li>
+      <li><strong>4. Import CallRail conversions to Google Ads:</strong> Setting up offline conversion import from CallRail → Google Ads enables smart bidding to optimize toward actual calls, not just clicks.</li>
+      <li><strong>5. Expand to additional markets:</strong> Current campaigns are Prescott Valley-focused. With LSA success in Gilbert and Flagstaff GBP demand, consider Search campaigns for those markets.</li>
+      <li><strong>6. Negative keyword audit:</strong> "plumber s" keyword (broad match issue) and Cottonwood with 0 conversions suggest broad match waste. Tighten to phrase and exact match.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     TAB 5 — META ADS (RTM FORMAT)
+═══════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-meta">
+
+  <div class="section-header">
+    <h2>Meta Ads — Facebook &amp; Instagram</h2>
+    <p>Social advertising performance · Jan–Apr 2026 · Gold Star Plumbing &amp; Drain</p>
+  </div>
+
+  <!-- KPI Row -->
+  <div class="kpi-row kpi-row-5">
+    <div class="kpi-card kpi-blue">
+      <div class="kpi-label">Ad Spend (Tracked)</div>
+      <div class="kpi-value">N/A</div>
+      <div class="kpi-sub">Meta Ads Manager not connected</div>
+      <div class="kpi-delta delta-warn">⚠ Connect for data</div>
+    </div>
+    <div class="kpi-card kpi-red">
+      <div class="kpi-label">Meta-Attr. Calls</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-sub">2 FB Referral + 1 Social Organic</div>
+      <div class="kpi-delta delta-bad">↓ &lt;0.1% of all calls</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Avg CPL</div>
+      <div class="kpi-value">—</div>
+      <div class="kpi-sub">Cannot calculate without spend data</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Impressions</div>
+      <div class="kpi-value">—</div>
+      <div class="kpi-sub">Requires Meta Ads Manager access</div>
+    </div>
+    <div class="kpi-card kpi-orange">
+      <div class="kpi-label">Opportunity Score</div>
+      <div class="kpi-value">HIGH</div>
+      <div class="kpi-sub">Major untapped channel for plumbing</div>
+      <div class="kpi-delta delta-warn">↑ Ready to activate</div>
+    </div>
+  </div>
+
+  <!-- Campaign Status -->
+  <div class="section-header"><h2>Campaign Overview</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Campaign</th><th>Type</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>Meta Leads</th><th>CPL</th><th>Signal</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="9" style="text-align:center;color:#6b7280;font-style:italic;padding:20px">
+            Meta Ads Manager data not currently available. Connect Meta Business Manager account to access campaign-level metrics.<br>
+            <span style="font-size:11px">CallRail tracking shows only 2 Facebook-referred calls in Jan–Apr 2026 — suggesting either no active Meta campaigns or click-to-website without phone tracking.</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Facebook Calls via CallRail -->
+  <div class="box box-orange">
+    <h3>⚠️ Facebook Calls via CallRail — Critical Attribution Gap</h3>
+    <ul>
+      <li><strong>Only 3 social-attributed calls</strong> in 4 months — 2 from Facebook Referral, 1 from Facebook Organic. This represents less than 0.13% of total call volume.</li>
+      <li><strong>Root cause:</strong> No dedicated Meta tracking phone numbers are configured in CallRail for Facebook/Instagram campaigns. Calls generated from Meta ads land on pages with the main website number, not a tracked CallRail number.</li>
+      <li><strong>Likely untracked volume:</strong> Andrew Pittman (Glendale, AZ) made a 6m 52s Facebook Organic call in Feb — evidence that Meta IS generating qualified interest, just not properly tracked.</li>
+      <li><strong>Recommendation:</strong> Set up dedicated CallRail tracking numbers on all Meta ad landing pages immediately to begin measuring Facebook/Instagram ROI.</li>
+    </ul>
+  </div>
+
+  <!-- 2-col grid: Chart placeholder + lead cards -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+    <div class="chart-card">
+      <h3>📊 Social Call Attribution — All Sources</h3>
+      <div class="chart-wrap"><canvas id="metaSocialChart"></canvas></div>
+    </div>
+    <div>
+      <div class="lead-card">
+        <h4>📘 Facebook Organic Calls</h4>
+        <div class="lc-kpis">
+          <div class="lc-kpi"><div class="lck-label">Total Calls</div><div class="lck-val">1</div></div>
+          <div class="lc-kpi"><div class="lck-label">Avg Duration</div><div class="lck-val">6m 52s</div></div>
+          <div class="lc-kpi"><div class="lck-label">Connect Rate</div><div class="lck-val">100%</div></div>
+        </div>
+        <p style="font-size:11px;color:#6b7280;margin-top:8px">Andrew Pittman, Glendale AZ — quality inbound call from organic social</p>
+      </div>
+      <div class="lead-card">
+        <h4>📘 Facebook Referral Calls</h4>
+        <div class="lc-kpis">
+          <div class="lc-kpi"><div class="lck-label">Total Calls</div><div class="lck-val">2</div></div>
+          <div class="lc-kpi"><div class="lck-label">Avg Duration</div><div class="lck-val">~3m</div></div>
+          <div class="lc-kpi"><div class="lck-label">Attribution</div><div class="lck-val">FB Ref</div></div>
+        </div>
+        <p style="font-size:11px;color:#6b7280;margin-top:8px">Facebook referral clicks leading to calls — likely from organic page activity</p>
+      </div>
+      <div class="lead-card">
+        <h4>🎯 Meta Ads Potential — Market Sizing</h4>
+        <div class="lc-kpis">
+          <div class="lc-kpi"><div class="lck-label">Homeowners in PV</div><div class="lck-val">~42K</div></div>
+          <div class="lc-kpi"><div class="lck-label">Target Audience</div><div class="lck-val">35–65</div></div>
+        </div>
+        <p style="font-size:11px;color:#6b7280;margin-top:8px">Prescott Valley / Prescott metro has high homeownership rate — ideal Facebook audience for plumbing services</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Suggested Posts Table -->
+  <div class="section-header"><h2>Suggested Content Calendar — Social Posts</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Suggested Post Theme</th><th>Platform</th><th>Goal</th><th>Format</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Before/after water heater replacement — Prescott Valley job</td><td>Facebook + IG</td><td>Trust / Lead</td><td>Photo carousel</td></tr>
+        <tr><td>2</td><td>"Signs your water softener needs replacing" — educational</td><td>Facebook</td><td>Awareness</td><td>Short video</td></tr>
+        <tr><td>3</td><td>5-star Google review spotlight — "Fast response at 2am"</td><td>Facebook + IG</td><td>Social proof</td><td>Graphic</td></tr>
+        <tr><td>4</td><td>Emergency drain cleaning promotion — summer special</td><td>Facebook</td><td>Leads</td><td>Ad + offer</td></tr>
+        <tr><td>5</td><td>Technician introduction video — "Meet the Gold Star team"</td><td>Facebook + IG</td><td>Brand trust</td><td>Short video</td></tr>
+        <tr><td>6</td><td>Flagstaff market launch announcement — now serving NAZ</td><td>Facebook</td><td>Awareness</td><td>Photo + caption</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Analysis Grid -->
+  <div class="analysis-grid">
+    <div class="analysis-card strengths">
+      <h4>✅ Meta Strengths &amp; Opportunities</h4>
+      <ul>
+        <li>Homeowner demographic (35–65) on Facebook perfectly matches Gold Star's customer profile</li>
+        <li>Before/after content performs extremely well for service trades on social</li>
+        <li>Emergency plumbing messaging creates high urgency — ideal for Facebook Leads Ads</li>
+        <li>Retargeting GBP/website visitors with Meta pixel can recapture warm leads</li>
+        <li>Instagram is strong for showcasing water damage, renovation, and before/after work</li>
+        <li>Local awareness campaigns at $500–$1,000/mo could generate 30–80 additional leads/month</li>
+      </ul>
+    </div>
+    <div class="analysis-card issues">
+      <h4>⚠️ Current Issues</h4>
+      <ul>
+        <li>Zero Meta tracking numbers in CallRail — no attribution visibility</li>
+        <li>Only 3 social-attributed calls in 4 months — major underperformance vs potential</li>
+        <li>Meta Ads Manager not connected — no impression, reach, or spend data available</li>
+        <li>No Meta pixel installed on goldstarplumbingaz.com — no retargeting audiences built</li>
+        <li>No Facebook Lead Ads running — leaving the lowest-friction lead capture unused</li>
+        <li>February Pittman call (6m 52s) shows organic social demand exists but uncaptured</li>
+      </ul>
+    </div>
+    <div class="analysis-card recs">
+      <h4>🎯 Priority Recommendations</h4>
+      <ul>
+        <li><strong>Install Meta Pixel</strong> on goldstarplumbingaz.com to start building retargeting audiences immediately</li>
+        <li><strong>Add CallRail tracking numbers</strong> to Facebook/Instagram ad landing pages for proper ROI measurement</li>
+        <li><strong>Launch Facebook Lead Ads</strong> for emergency plumbing, drain cleaning, and water heater replacement in Prescott Valley + Gilbert markets</li>
+        <li><strong>Connect Meta Ads Manager</strong> to reporting dashboard for monthly spend/impression tracking</li>
+        <li><strong>Retarget website visitors</strong> who didn't call — serve them urgency-focused ads within 7 days</li>
+        <li><strong>Set test budget at $750/mo</strong> across 3 markets to establish CPL baseline before scaling</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     TAB 6 — SEO (RTM FORMAT)
+═══════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-seo">
+
+  <div class="section-header">
+    <h2>SEO — Organic Search Performance</h2>
+    <p>Google Organic · GBP Map Pack · Local Rankings · Jan–Apr 2026 · All Markets</p>
+  </div>
+
+  <!-- KPI Row 6 -->
+  <div class="kpi-row kpi-row-6">
+    <div class="kpi-card kpi-blue">
+      <div class="kpi-label">Organic Calls (CallRail)</div>
+      <div class="kpi-value">92</div>
+      <div class="kpi-sub">Google Organic source</div>
+      <div class="kpi-delta delta-good">↑ +112% Jan→Mar</div>
+    </div>
+    <div class="kpi-card kpi-green">
+      <div class="kpi-label">Website + Yelp Organic</div>
+      <div class="kpi-value">285</div>
+      <div class="kpi-sub">All organic-attributed calls</div>
+      <div class="kpi-delta delta-good">↑ Growing</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">GBP Impressions (All)</div>
+      <div class="kpi-value">15,200+</div>
+      <div class="kpi-sub">4 locations · Jan–Apr 2026</div>
+    </div>
+    <div class="kpi-card kpi-orange">
+      <div class="kpi-label">Avg Map Pack Position</div>
+      <div class="kpi-value">#1–2</div>
+      <div class="kpi-sub">Flagstaff &amp; PV dominant</div>
+      <div class="kpi-delta delta-good">Strong map pack</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">GSC Clicks</div>
+      <div class="kpi-value">—</div>
+      <div class="kpi-sub">Connect GSC for full data</div>
+    </div>
+    <div class="kpi-card kpi-gold">
+      <div class="kpi-label">Organic Conv. Rate</div>
+      <div class="kpi-value">~3.9%</div>
+      <div class="kpi-sub">92 calls vs total traffic est.</div>
+      <div class="kpi-delta delta-warn">↑ Room to grow to 10%+</div>
+    </div>
+  </div>
+
+  <!-- Organic Call Table -->
+  <div class="box box-green">
+    <h3>📞 CallRail — Organic &amp; Direct Call Attribution (Jan–Apr 2026)</h3>
+    <div class="table-wrap" style="margin:0;margin-top:12px">
+      <table>
+        <thead>
+          <tr><th>Source</th><th>January</th><th>February</th><th>March</th><th>April*</th><th>Total</th><th>MoM Best</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Google Organic</strong></td><td>17</td><td>22</td><td>36</td><td>17</td><td><strong>92</strong></td><td>Mar: 36 (+64%)</td></tr>
+          <tr><td><strong>Yelp (Directory Organic)</strong></td><td>—</td><td>32</td><td>24</td><td>15</td><td><strong>71</strong></td><td>Feb: 32 (new)</td></tr>
+          <tr><td><strong>Website-Prescott (Organic)</strong></td><td>15</td><td>20</td><td>27</td><td>15</td><td><strong>77</strong></td><td>Mar: 27</td></tr>
+          <tr><td><strong>Website-Flagstaff (Organic)</strong></td><td>10</td><td>16</td><td>18</td><td>10</td><td><strong>54</strong></td><td>Mar: 18</td></tr>
+          <tr><td><strong>Website-PV (Organic)</strong></td><td>8</td><td>14</td><td>18</td><td>8</td><td><strong>48</strong></td><td>Mar: 18</td></tr>
+          <tr><td><strong>Direct (branded/bookmarked)</strong></td><td>12</td><td>27</td><td>36</td><td>28</td><td><strong>103</strong></td><td>Mar: 36</td></tr>
+          <tr style="background:#f0fdf4;font-weight:700"><td>ORGANIC+ TOTAL</td><td>62</td><td>131</td><td>159</td><td>93</td><td>445</td><td>Mar: 159</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Charts Row -->
+  <div class="chart-row-equal">
+    <div class="chart-card">
+      <h3>📈 Organic Search Calls — Monthly Trend</h3>
+      <div class="chart-wrap"><canvas id="seoCallTrend"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>📊 GBP Map Pack Rankings — Apr 2026</h3>
+      <div class="chart-wrap"><canvas id="seoRankingsChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Keyword Rankings Section -->
+  <div class="section-header"><h2>GBP Map Pack Keyword Rankings — All Markets (Apr 2026)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Keyword</th><th>Gilbert</th><th>Tempe</th><th>Prescott Valley</th><th>Flagstaff</th>
+          <th>Jan Avg</th><th>Apr Avg</th><th>Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Plumber</strong></td>
+          <td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>1.0</td><td>1.0</td><td><span class="tag tag-green">Stable #1</span></td>
+        </tr>
+        <tr>
+          <td><strong>Drain cleaning</strong></td>
+          <td><span class="rank-good">1</span></td><td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>1.5</td><td>1.25</td><td><span class="tag tag-green">↑ Improving</span></td>
+        </tr>
+        <tr>
+          <td><strong>Water heater repair</strong></td>
+          <td><span class="rank-bad">12</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td>
+          <td>4.0</td><td>4.0</td><td><span class="tag tag-yellow">Gilbert weak</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sewer line repair</strong></td>
+          <td><span class="rank-mid">9</span></td><td><span class="rank-good">3</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>5.0</td><td>3.5</td><td><span class="tag tag-green">↑ Getting stronger</span></td>
+        </tr>
+        <tr>
+          <td><strong>Trenchless sewer repair</strong></td>
+          <td><span class="rank-mid">6</span></td><td><span class="rank-mid">8</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>6.0</td><td>4.0</td><td><span class="tag tag-green">↑ PV &amp; FS strong</span></td>
+        </tr>
+        <tr>
+          <td><strong>Pipe repair</strong></td>
+          <td><span class="rank-mid">6</span></td><td><span class="rank-mid">4</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>3.5</td><td>3.0</td><td><span class="tag tag-green">↑ Strong</span></td>
+        </tr>
+        <tr>
+          <td><strong>Water line repair</strong></td>
+          <td><span class="rank-mid">8</span></td><td><span class="rank-mid">5</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>4.5</td><td>3.75</td><td><span class="tag tag-green">↑ Improving</span></td>
+        </tr>
+        <tr>
+          <td><strong>Tankless water heater</strong></td>
+          <td><span class="rank-mid">8</span></td><td><span class="rank-dash">—</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>4.0</td><td>3.3</td><td><span class="tag tag-green">Strong 3 markets</span></td>
+        </tr>
+        <tr>
+          <td><strong>Water softener installation</strong></td>
+          <td><span class="rank-dash">—</span></td><td><span class="rank-dash">—</span></td><td><span class="rank-dash">—</span></td><td><span class="rank-good">2</span></td>
+          <td>—</td><td>2</td><td><span class="tag tag-red">Only Flagstaff</span></td>
+        </tr>
+        <tr>
+          <td><strong>Emergency plumber</strong></td>
+          <td><span class="rank-good">2</span></td><td><span class="rank-good">3</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>2.5</td><td>1.75</td><td><span class="tag tag-green">↑ Excellent</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sewer camera inspection</strong></td>
+          <td><span class="rank-mid">6</span></td><td><span class="rank-mid">5</span></td><td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>4.0</td><td>3.25</td><td><span class="tag tag-green">Strong</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Opportunity Estimator -->
+  <div class="section-header"><h2>Organic Opportunity Estimator — Gilbert Market (Improvement Potential)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Keyword</th><th>Current Rank</th><th>Target Rank</th><th>Est. Monthly Searches</th><th>CTR at Target</th><th>Est. Add'l Clicks/Mo</th><th>Est. Add'l Calls/Mo</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Water heater repair gilbert az</td>
+          <td><span class="rank-bad">12</span></td><td><span class="rank-good">3</span></td>
+          <td>320</td><td>15%</td><td>+48</td><td>+5</td>
+        </tr>
+        <tr>
+          <td>Plumber gilbert az</td>
+          <td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>590</td><td>28%</td><td>0 (already #1)</td><td>Maintain</td>
+        </tr>
+        <tr>
+          <td>Sewer repair gilbert</td>
+          <td><span class="rank-mid">9</span></td><td><span class="rank-good">3</span></td>
+          <td>210</td><td>15%</td><td>+32</td><td>+3</td>
+        </tr>
+        <tr>
+          <td>Water softener gilbert az</td>
+          <td><span class="rank-dash">—</span></td><td><span class="rank-mid">5</span></td>
+          <td>180</td><td>8%</td><td>+14</td><td>+1–2</td>
+        </tr>
+        <tr>
+          <td>Emergency plumber gilbert</td>
+          <td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td>
+          <td>260</td><td>28%</td><td>+20</td><td>+2</td>
+        </tr>
+        <tr style="background:#f0f4ff;font-weight:700">
+          <td colspan="5">Total Estimated Additional Opportunity (Gilbert)</td>
+          <td>+114 clicks/mo</td><td>+11–13 calls/mo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Local Rankings Full Table -->
+  <div class="section-header"><h2>Local Rankings Snapshot — Year-Over-Year (Jan 2025 vs Apr 2026)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Market</th><th>Keyword</th><th>Jan 2025 Rank</th><th>Jan 2026 Rank</th><th>Apr 2026 Rank</th><th>YoY Change</th><th>QoQ Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Gilbert</td><td>Plumber</td><td>1</td><td>14</td><td>1</td><td><span class="tag tag-green">Recovered</span></td><td><span class="tag tag-green">↑ +13 pos</span></td></tr>
+        <tr><td>Gilbert</td><td>Drain cleaning</td><td>1</td><td>20</td><td>1</td><td><span class="tag tag-green">Recovered</span></td><td><span class="tag tag-green">↑ +19 pos</span></td></tr>
+        <tr><td>Gilbert</td><td>Water heater repair</td><td>1</td><td>—</td><td>12</td><td><span class="tag tag-red">↓ Dropped</span></td><td><span class="tag tag-yellow">Partial recovery</span></td></tr>
+        <tr><td>Prescott Valley</td><td>Plumber</td><td>1</td><td>1</td><td>1</td><td><span class="tag tag-green">Stable #1</span></td><td><span class="tag tag-green">Unchanged</span></td></tr>
+        <tr><td>Prescott Valley</td><td>Drain cleaning</td><td>1</td><td>1</td><td>1</td><td><span class="tag tag-green">Stable #1</span></td><td><span class="tag tag-green">Unchanged</span></td></tr>
+        <tr><td>Flagstaff</td><td>Plumber</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">New market #1</span></td><td><span class="tag tag-green">Stable</span></td></tr>
+        <tr><td>Flagstaff</td><td>Sewer line repair</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">Strong entry</span></td><td><span class="tag tag-green">Stable</span></td></tr>
+        <tr><td>Tempe</td><td>Plumber</td><td>—</td><td>2</td><td>1</td><td><span class="tag tag-green">New market</span></td><td><span class="tag tag-green">↑ Hit #1</span></td></tr>
+        <tr><td>Tempe</td><td>Water heater repair</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">Strong entry</span></td><td><span class="tag tag-green">Stable</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Insight Grid — Root Cause Analysis -->
+  <div class="insight-grid">
+    <div class="insight-card red">
+      <h4>🔴 Gilbert Feb–Mar Rankings Collapse</h4>
+      <p>Gilbert keyword rankings dropped from #1 to #14–20 in Jan–Feb 2026. Root cause: likely Google algorithm update or GBP spam filter trigger. Rankings recovered to #1 by April — suggests temporary issue, not permanent damage.</p>
+    </div>
+    <div class="insight-card red">
+      <h4>🔴 Water Softener Keyword Gap</h4>
+      <p>Water softener installation ranks only in Flagstaff (#2). All other markets show no ranking. This is a high-value service category with significant revenue potential — dedicated GBP content and service pages needed.</p>
+    </div>
+    <div class="insight-card yellow">
+      <h4>🟡 GA4 &amp; GSC Data Missing</h4>
+      <p>Google Analytics 4 and Search Console are not connected to this report. Without this data, we cannot see website sessions, bounce rate, keyword impressions, or conversion paths. Connection is critical for full SEO picture.</p>
+    </div>
+    <div class="insight-card yellow">
+      <h4>🟡 Organic Calls Below Potential</h4>
+      <p>Organic calls represent 3.9% of total calls (92/2,358). For an SEO program with multiple #1 rankings, 10–15% is achievable. The gap suggests either low-volume market or website conversion issues.</p>
+    </div>
+    <div class="insight-card green">
+      <h4>🟢 Map Pack Dominance — 3+ Markets</h4>
+      <p>Prescott Valley, Flagstaff, and Tempe all rank #1 for core plumbing keywords. This map pack dominance is the primary driver of GBP's 873 calls — the single largest traffic source at 37%.</p>
+    </div>
+    <div class="insight-card blue">
+      <h4>🔵 New Markets Ranking Fast</h4>
+      <p>Flagstaff and Tempe launched as new GBP locations in 2024–2025. Both have achieved #1 rankings across core terms within months — evidence of strong foundational SEO setup and effective citation building.</p>
+    </div>
+  </div>
+
+  <!-- Analysis Grid -->
   <div class="analysis-grid">
     <div class="analysis-card strengths">
       <h4>✅ SEO Strengths</h4>
       <ul>
-        <li>Flagstaff and Prescott Valley rank #1 across nearly all plumbing keywords</li>
-        <li>Organic calls growing: 17 → 22 → 36 month-over-month</li>
-        <li>GBP map pack dominance supports organic click-through rates</li>
-        <li>Multiple locations create geographic SEO authority across AZ</li>
+        <li>Dominant map pack presence — #1 rankings across Flagstaff, PV, Tempe for all core terms</li>
+        <li>Organic calls grew 112% from Jan to March (17 → 36)</li>
+        <li>Gilbert rankings fully recovered to #1 after Feb–Mar dip — strong domain authority</li>
+        <li>New markets (Tempe, Flagstaff) achieving top rankings within their first year</li>
+        <li>285 total organic+ attributed calls across all web/directory channels</li>
+        <li>GBP impressions exceeding 15,200 across all locations — strong local visibility</li>
       </ul>
     </div>
     <div class="analysis-card issues">
-      <h4>⚠️ SEO Gaps</h4>
+      <h4>⚠️ SEO Issues</h4>
       <ul>
-        <li>GA4 &amp; GSC data not yet connected — website traffic metrics unavailable</li>
-        <li>Gilbert rankings recovering but still below peak (Q1 2025: consistent #1)</li>
-        <li>Water treatment and softener keywords underperforming in all markets</li>
-        <li>Website organic calls (3.9%) below typical 10–15% for established SEO</li>
+        <li>GA4 &amp; GSC not connected — website traffic and keyword search volume unknown</li>
+        <li>Gilbert water heater repair ranking at #12 — high-revenue keyword underperforming</li>
+        <li>Water softener/treatment keywords absent in Gilbert, Tempe, Prescott Valley</li>
+        <li>GBP impressions declining in Gilbert (Gilbert went from 1,920 in Dec 2024 → 451 in Feb 2026)</li>
+        <li>Organic calls (3.9%) underperforming vs industry benchmark of 10–15%</li>
+        <li>No blog or content strategy visible — competing primarily on GBP signals alone</li>
       </ul>
     </div>
     <div class="analysis-card recs">
       <h4>🎯 SEO Priorities</h4>
       <ul>
-        <li>Connect GA4 &amp; GSC to reporting dashboard for full traffic picture</li>
-        <li>Create location-specific service pages for water treatment/softener</li>
-        <li>Build review velocity for Gilbert GBP to recover map pack rankings</li>
-        <li>Add schema markup to all location pages for enhanced SERP features</li>
+        <li><strong>Connect GA4 &amp; GSC immediately</strong> — needed for full traffic, keyword, and conversion visibility</li>
+        <li><strong>Recover Gilbert water heater ranking</strong> — build citations, add service-specific GBP posts, request reviews mentioning water heater service</li>
+        <li><strong>Create water softener service pages</strong> for Gilbert, Tempe, PV — high-value missed category</li>
+        <li><strong>Launch content/blog strategy</strong> — 2 posts/month targeting service keywords and seasonal plumbing topics</li>
+        <li><strong>GBP post cadence</strong> — 2x/week posts across all locations to signal active business and boost map pack</li>
+        <li><strong>Review campaign</strong> — target 5 new reviews/month per location to sustain map pack dominance</li>
       </ul>
     </div>
+  </div>
+
+  <!-- Blog Topics Box -->
+  <div class="box box-green">
+    <h3>📝 Suggested Blog Topics — SEO Content Calendar</h3>
+    <ul>
+      <li><strong>Week 1:</strong> "Why Is My Water Heater Making Noise? (Gilbert &amp; Prescott Valley Homeowners Guide)" — target water heater repair keywords</li>
+      <li><strong>Week 2:</strong> "Do I Need a Water Softener in Prescott Valley, AZ?" — target water softener installation search in hard water market</li>
+      <li><strong>Week 3:</strong> "Trenchless Sewer Repair vs Traditional Digging — What Flagstaff Homeowners Need to Know"</li>
+      <li><strong>Week 4:</strong> "How Much Does a Plumber Cost in Tempe, AZ? 2026 Pricing Guide"</li>
+      <li><strong>Week 5:</strong> "Top 5 Signs Your Sewer Line Needs Repair (Prescott &amp; Cottonwood)"</li>
+      <li><strong>Week 6:</strong> "Best Tankless Water Heater Brands for Arizona Homes — Gold Star's Expert Picks"</li>
+    </ul>
   </div>
 
 </div>
@@ -1623,6 +2356,50 @@ function buildCharts(){
     },
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},
       scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true,max:13,title:{display:true,text:'# of Keywords'}}}}
+  });
+
+  // ── CALLRAIL CHARTS ──
+  makeChart('crSourceTrend', {
+    type:'bar',
+    data:{
+      labels:['Jan 2026','Feb 2026','Mar 2026','Apr 2026*'],
+      datasets:[
+        {label:'GBP',data:[108,375,268,122],backgroundColor:BLUE,borderRadius:3},
+        {label:'LSA',data:[50,191,270,113],backgroundColor:ORANGE,borderRadius:3},
+        {label:'Landing/PPC',data:[19,53,118,55],backgroundColor:GREEN,borderRadius:3},
+        {label:'Organic',data:[17,22,36,17],backgroundColor:TEAL,borderRadius:3},
+        {label:'Other',data:[78,144,214,88],backgroundColor:GRAY,borderRadius:3}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},
+      scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true}}}
+  });
+
+  makeChart('crSourcePie', {
+    type:'doughnut',
+    data:{
+      labels:['GBP (873)','LSA (631)','Landing/CPC (245)','Direct (103)','Organic (92)','Google Ads (80)','Websites (179)','Yelp (71)','Other (84)'],
+      datasets:[{data:[873,631,245,103,92,80,179,71,84],
+        backgroundColor:[BLUE,ORANGE,GREEN,GRAY,TEAL,NAVY,PURPLE,RED,'#94a3b8'],
+        borderWidth:2,borderColor:'#fff'}]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}
+  });
+
+  // ── META ADS CHART ──
+  makeChart('metaSocialChart', {
+    type:'bar',
+    data:{
+      labels:['Jan','Feb','Mar','Apr*'],
+      datasets:[
+        {label:'GBP Calls',data:[108,375,268,122],backgroundColor:BLUE,borderRadius:4},
+        {label:'Google Organic',data:[17,22,36,17],backgroundColor:GREEN,borderRadius:4},
+        {label:'Facebook/Social',data:[0,2,1,0],backgroundColor:'#1877F2',borderRadius:4},
+        {label:'Direct',data:[12,27,36,28],backgroundColor:GRAY,borderRadius:4}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},
+      scales:{x:{stacked:false},y:{beginAtZero:true}}}
   });
 
 }
