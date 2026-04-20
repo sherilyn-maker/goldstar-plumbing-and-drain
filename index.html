@@ -3171,6 +3171,12 @@ tbody tr:last-child td{border-bottom:none}
      TAB 6 — SEO (RTM FORMAT)
 ═══════════════════════════════════════════════ -->
 <div class="tab-pane" id="tab-seo">
+  <div class="sub-tab-nav">
+    <button class="sub-tab-btn active" data-sub="seo-performance">📊 Performance</button>
+    <button class="sub-tab-btn" data-sub="seo-calllogs">📞 Call Logs</button>
+  </div>
+  <div class="sub-tab-pane active" id="seo-performance">
+
 
   <div class="section-header">
     <h2>SEO — Organic Search Performance</h2>
@@ -3407,6 +3413,217 @@ tbody tr:last-child td{border-bottom:none}
     </div>
   </div>
 
+  <!-- Charts Row -->
+  <div class="chart-row-equal">
+    <div class="chart-card">
+      <h3>📈 GA4 Sessions — Monthly Trend by Channel</h3>
+      <div class="chart-wrap"><canvas id="seoCallTrend"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>🥧 Traffic by Channel — Jan–Apr 2026 (GA4)</h3>
+      <div class="chart-wrap"><canvas id="seoRankingsChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- GSC Keywords Section -->
+  <div class="section-header"><h2>Google Search Console — Top Organic Keywords (Dec 2025–Apr 2026)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Keyword</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg Position</th><th>Type</th><th>Opportunity</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>plumber near me</strong></td><td>7</td><td>9,568</td><td>0.07%</td><td>8.2</td><td><span class="tag tag-red">Priority Gap</span></td><td>9,568 impressions at pos 8 — every step up triples clicks</td></tr>
+        <tr><td><strong>plumbers near me</strong></td><td>9</td><td>2,537</td><td>0.35%</td><td>7.2</td><td><span class="tag tag-red">Priority Gap</span></td><td>2,537 impr at pos 7 — top 3 would add ~150 clicks/mo</td></tr>
+        <tr><td><strong>plumber</strong></td><td>4</td><td>8,608</td><td>0.05%</td><td>6.6</td><td><span class="tag tag-red">Priority Gap</span></td><td>8,608 impr — generic high-volume, rising slowly</td></tr>
+        <tr><td><strong>plumber gilbert az</strong></td><td>5</td><td>3,007</td><td>0.17%</td><td>15.3</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>3K impr at pos 15 — page 1 push would unlock major volume</td></tr>
+        <tr><td><strong>plumbers gilbert az</strong></td><td>7</td><td>745</td><td>0.94%</td><td>16.1</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>745 impr, CTR decent — position needs to improve</td></tr>
+        <tr><td><strong>plumbers in gilbert az</strong></td><td>7</td><td>753</td><td>0.93%</td><td>15.4</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>Closely clusters with "plumbers gilbert az"</td></tr>
+        <tr><td><strong>gilbert plumber</strong></td><td>2</td><td>1,009</td><td>0.20%</td><td>14.3</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>1K impr, pos 14 — consistent Gilbert intent signal</td></tr>
+        <tr><td><strong>plumbers flagstaff</strong></td><td>7</td><td>885</td><td>0.79%</td><td>6.3</td><td><span class="tag tag-green">Local – Flagstaff</span></td><td>Strong market — pos 6, CTR shows intent</td></tr>
+        <tr><td><strong>flagstaff plumber</strong></td><td>4</td><td>353</td><td>1.13%</td><td>6.6</td><td><span class="tag tag-green">Local – Flagstaff</span></td><td>1%+ CTR signal — Flagstaff visibility growing</td></tr>
+        <tr><td><strong>plumbers tempe</strong></td><td>5</td><td>280</td><td>1.79%</td><td>6.1</td><td><span class="tag tag-green">Local – Tempe</span></td><td>1.79% CTR — highest CTR of local terms</td></tr>
+        <tr><td><strong>drain cleaning near me</strong></td><td>2</td><td>1,283</td><td>0.16%</td><td>13.0</td><td><span class="tag tag-yellow">Service Query</span></td><td>1,283 impr at pos 13 — drain service page optimization needed</td></tr>
+        <tr><td><strong>anode rod</strong></td><td>6</td><td>11,719</td><td>0.05%</td><td>4.6</td><td><span class="tag tag-green">Blog Content</span></td><td>11,719 impr — top informational driver; blog working</td></tr>
+        <tr><td><strong>bad anode rod symptoms</strong></td><td>4</td><td>903</td><td>0.44%</td><td>5.6</td><td><span class="tag tag-green">Blog Content</span></td><td>Water heater blog content capturing research traffic</td></tr>
+        <tr><td><strong>anode rod water heater</strong></td><td>2</td><td>4,359</td><td>0.05%</td><td>6.9</td><td><span class="tag tag-green">Blog Content</span></td><td>4,359 impr — informational, funnels to water heater service</td></tr>
+        <tr style="background:#fef9c3;font-weight:600"><td colspan="7">⚠️ KEY INSIGHT: "plumber near me" and "plumber gilbert az" alone account for 12,575+ impressions but barely 12 clicks. Moving these from pos 8–15 to top 3 is the single biggest organic growth lever.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- GSC Top Pages -->
+  <div class="section-header"><h2>Google Search Console — Top Pages by Organic Clicks</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Page</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg Position</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Homepage (/)</strong></td><td>368</td><td>22,875</td><td>1.61%</td><td>21.1</td><td>Highest click page — brand terms</td></tr>
+        <tr><td><strong>Gilbert Service Area (GBP utm)</strong></td><td>305</td><td>56,746</td><td>0.54%</td><td>4.6</td><td>Map pack click landing — position 4.6 excellent</td></tr>
+        <tr><td><strong>Blog: Anode Rod Failure (Top 3 Signs)</strong></td><td>140</td><td>59,817</td><td>0.23%</td><td>2.0</td><td>59K impressions — top informational content</td></tr>
+        <tr><td><strong>Prescott Valley Service Area (GBP utm)</strong></td><td>124</td><td>18,134</td><td>0.68%</td><td>2.7</td><td>Strong GBP click-through rate</td></tr>
+        <tr><td><strong>Flagstaff Service Area (/service-areas/flagstaff-az/)</strong></td><td>106</td><td>39,407</td><td>0.27%</td><td>14.8</td><td>High impressions — lower pos 14.8 limiting clicks</td></tr>
+        <tr><td><strong>Tempe GBP landing (/?utm=tempe)</strong></td><td>89</td><td>22,522</td><td>0.40%</td><td>4.0</td><td>Tempe map pack performing well</td></tr>
+        <tr><td><strong>Prescott Service Area</strong></td><td>51</td><td>50,141</td><td>0.10%</td><td>32.9</td><td>50K impr at pos 33 — massive opportunity if ranking improves</td></tr>
+        <tr><td><strong>Blog: Water Heater Tank Sizing</strong></td><td>45</td><td>7,293</td><td>0.62%</td><td>3.1</td><td>Good CTR — helpful content</td></tr>
+        <tr><td><strong>Blog: Reverse Osmosis Filter Guide</strong></td><td>38</td><td>14,206</td><td>0.27%</td><td>6.7</td><td>Solid blog content performance</td></tr>
+        <tr><td><strong>Blog: Water Heater Warranty Guide</strong></td><td>32</td><td>21,607</td><td>0.15%</td><td>9.9</td><td>Improving toward page 1</td></tr>
+        <tr><td><strong>Sewer Camera Inspection Page</strong></td><td>17</td><td>16,185</td><td>0.11%</td><td>40.4</td><td>16K impr at pos 40 — needs major optimization</td></tr>
+        <tr style="background:#eff6ff;font-weight:600"><td colspan="6">Total (top pages): 1,315 clicks / 328,933 impressions / 0.40% avg CTR</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Keyword Rankings Section -->
+  <!-- Opportunity Estimator -->
+  <div class="section-header"><h2>Organic Opportunity Estimator — Gilbert Market (Improvement Potential)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Keyword</th><th>Current Rank</th><th>Target Rank</th><th>Est. Monthly Searches</th><th>CTR at Target</th><th>Est. Add'l Clicks/Mo</th><th>Est. Add'l Calls/Mo</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Water heater repair gilbert az</td>
+          <td><span class="rank-bad">12</span></td><td><span class="rank-good">3</span></td>
+          <td>320</td><td>15%</td><td>+48</td><td>+5</td>
+        </tr>
+        <tr>
+          <td>Plumber gilbert az</td>
+          <td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
+          <td>590</td><td>28%</td><td>0 (already #1)</td><td>Maintain</td>
+        </tr>
+        <tr>
+          <td>Sewer repair gilbert</td>
+          <td><span class="rank-mid">9</span></td><td><span class="rank-good">3</span></td>
+          <td>210</td><td>15%</td><td>+32</td><td>+3</td>
+        </tr>
+        <tr>
+          <td>Water softener gilbert az</td>
+          <td><span class="rank-dash">—</span></td><td><span class="rank-mid">5</span></td>
+          <td>180</td><td>8%</td><td>+14</td><td>+1–2</td>
+        </tr>
+        <tr>
+          <td>Emergency plumber gilbert</td>
+          <td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td>
+          <td>260</td><td>28%</td><td>+20</td><td>+2</td>
+        </tr>
+        <tr style="background:#f0f4ff;font-weight:700">
+          <td colspan="5">Total Estimated Additional Opportunity (Gilbert)</td>
+          <td>+114 clicks/mo</td><td>+11–13 calls/mo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Local Rankings Full Table -->
+  <div class="section-header"><h2>Local Rankings Snapshot — Year-Over-Year (Jan 2025 vs Apr 2026)</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Market</th><th>Keyword</th><th>Jan 2025 Rank</th><th>Jan 2026 Rank</th><th>Apr 2026 Rank</th><th>YoY Change</th><th>QoQ Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Gilbert</td><td>Plumber</td><td>1</td><td>14</td><td>1</td><td><span class="tag tag-green">Recovered</span></td><td><span class="tag tag-green">↑ +13 pos</span></td></tr>
+        <tr><td>Gilbert</td><td>Drain cleaning</td><td>1</td><td>20</td><td>1</td><td><span class="tag tag-green">Recovered</span></td><td><span class="tag tag-green">↑ +19 pos</span></td></tr>
+        <tr><td>Gilbert</td><td>Water heater repair</td><td>1</td><td>—</td><td>12</td><td><span class="tag tag-red">↓ Dropped</span></td><td><span class="tag tag-yellow">Partial recovery</span></td></tr>
+        <tr><td>Prescott Valley</td><td>Plumber</td><td>1</td><td>1</td><td>1</td><td><span class="tag tag-green">Stable #1</span></td><td><span class="tag tag-green">Unchanged</span></td></tr>
+        <tr><td>Prescott Valley</td><td>Drain cleaning</td><td>1</td><td>1</td><td>1</td><td><span class="tag tag-green">Stable #1</span></td><td><span class="tag tag-green">Unchanged</span></td></tr>
+        <tr><td>Flagstaff</td><td>Plumber</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">New market #1</span></td><td><span class="tag tag-green">Stable</span></td></tr>
+        <tr><td>Flagstaff</td><td>Sewer line repair</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">Strong entry</span></td><td><span class="tag tag-green">Stable</span></td></tr>
+        <tr><td>Tempe</td><td>Plumber</td><td>—</td><td>2</td><td>1</td><td><span class="tag tag-green">New market</span></td><td><span class="tag tag-green">↑ Hit #1</span></td></tr>
+        <tr><td>Tempe</td><td>Water heater repair</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">Strong entry</span></td><td><span class="tag tag-green">Stable</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Insight Grid — Root Cause Analysis -->
+  <div class="insight-grid">
+    <div class="insight-card red">
+      <h4>🔴 Gilbert Feb–Mar Rankings Collapse</h4>
+      <p>Gilbert keyword rankings dropped from #1 to #14–20 in Jan–Feb 2026. Root cause: likely Google algorithm update or GBP spam filter trigger. Rankings recovered to #1 by April — suggests temporary issue, not permanent damage.</p>
+    </div>
+    <div class="insight-card red">
+      <h4>🔴 Water Softener Keyword Gap</h4>
+      <p>Water softener installation ranks only in Flagstaff (#2). All other markets show no ranking. This is a high-value service category with significant revenue potential — dedicated GBP content and service pages needed.</p>
+    </div>
+    <div class="insight-card yellow">
+      <h4>🟡 Low CTR on High-Volume Keywords</h4>
+      <p>"Plumber near me" generates 8,848 impressions at avg position 8.0 but only 0.08% CTR (7 clicks). "Plumber gilbert az" gets 2,758 impressions at position 14.8. Moving these to top 3 could add 200–400+ organic clicks/month.</p>
+    </div>
+    <div class="insight-card yellow">
+      <h4>🟡 Traffic Dominated by Paid — Organic Underperforming</h4>
+      <p>Paid Other (programmatic/display) drives 3,971 sessions (31%) vs Google Organic 2,372 (18%). Organic search engagement rate is 62.7% vs paid's 19.1% — organic visitors convert 3× better but get less budget focus.</p>
+    </div>
+    <div class="insight-card green">
+      <h4>🟢 Map Pack Dominance — 3+ Markets</h4>
+      <p>Prescott Valley, Flagstaff, and Tempe all rank #1 for core plumbing keywords. This map pack dominance is the primary driver of GBP's 873 calls — the single largest traffic source at 37%.</p>
+    </div>
+    <div class="insight-card blue">
+      <h4>🔵 New Markets Ranking Fast</h4>
+      <p>Flagstaff and Tempe launched as new GBP locations in 2024–2025. Both have achieved #1 rankings across core terms within months — evidence of strong foundational SEO setup and effective citation building.</p>
+    </div>
+  </div>
+
+  <!-- Analysis Grid -->
+  <div class="analysis-grid">
+    <div class="analysis-card strengths">
+      <h4>✅ SEO Strengths</h4>
+      <ul>
+        <li>Dominant map pack presence — #1 rankings across Flagstaff, PV, Tempe for all core terms</li>
+        <li>852,907 GSC impressions prove strong brand search visibility and growing local footprint</li>
+        <li>Website sessions grew 77% from Jan (2,286) to Mar (4,057) — accelerating organic growth</li>
+        <li>Organic search engagement rate 62.7% — far above site average of 33.2%, confirming high organic visitor intent</li>
+        <li>Blog content proven to drive impressions — anode rod article: 59,817 impressions at position 2.0</li>
+        <li>New markets (Tempe, Flagstaff) achieving top rankings within their first year — strong SEO foundation</li>
+        <li>Gilbert rankings fully recovered to #1 after Feb–Mar algorithm-related dip</li>
+      </ul>
+    </div>
+    <div class="analysis-card issues">
+      <h4>⚠️ SEO Issues</h4>
+      <ul>
+        <li>Overall site avg position 23.6 — majority of rankings on page 2–3; non-branded local terms underperforming</li>
+        <li>Gilbert water heater repair ranking at #12 — high-revenue keyword underperforming</li>
+        <li>Water softener/treatment keywords absent in Gilbert, Tempe, Prescott Valley</li>
+        <li>GBP impressions declining in Gilbert (from 1,920 in Dec 2024 → 451 in Feb 2026 → partial recovery)</li>
+        <li>Site engagement rate at 33.2% — high bounce rate (66.8%) signals landing page relevance or speed issues</li>
+        <li>Overall CTR of 0.21% is below the 1–3% benchmark for local service businesses — title/meta description optimization needed</li>
+        <li>"Plumber near me" at 8,848 impressions, pos 8 — getting just 7 clicks; top 3 position would yield ~300+ clicks/month</li>
+      </ul>
+    </div>
+    <div class="analysis-card recs">
+      <h4>🎯 SEO Priorities</h4>
+      <ul>
+        <li><strong>Optimize meta titles/descriptions</strong> for top impression pages — homepage (22K impr) and Flagstaff (39K impr) have low CTR; improving to 1% would add 400–600 clicks/month</li>
+        <li><strong>Recover Gilbert water heater ranking</strong> — build citations, add service-specific GBP posts, request reviews mentioning water heater service</li>
+        <li><strong>Create water softener service pages</strong> for Gilbert, Tempe, PV — high-value missed category</li>
+        <li><strong>Accelerate blog content</strong> — anode rod blog (59,817 impressions) proves content drives visibility; target 2 posts/month on water heater, sewer, and Prescott service keywords</li>
+        <li><strong>Improve Prescott organic page</strong> — 50,141 impressions at position 32.9 — a strong page optimization push could move this to page 1</li>
+        <li><strong>GBP post cadence</strong> — 2x/week posts across all locations to sustain map pack dominance and drive GBP click-through</li>
+        <li><strong>CRO audit</strong> — with 12,843 sessions and 33.2% engagement rate, fixing page speed and CTA placement could double call volume without increasing traffic</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Blog Topics Box -->
+  <div class="box box-green">
+    <h3>📝 Suggested Blog Topics — SEO Content Calendar</h3>
+    <ul>
+      <li><strong>Week 1:</strong> "Why Is My Water Heater Making Noise? (Gilbert &amp; Prescott Valley Homeowners Guide)" — target water heater repair keywords</li>
+      <li><strong>Week 2:</strong> "Do I Need a Water Softener in Prescott Valley, AZ?" — target water softener installation search in hard water market</li>
+      <li><strong>Week 3:</strong> "Trenchless Sewer Repair vs Traditional Digging — What Flagstaff Homeowners Need to Know"</li>
+      <li><strong>Week 4:</strong> "How Much Does a Plumber Cost in Tempe, AZ? 2026 Pricing Guide"</li>
+      <li><strong>Week 5:</strong> "Top 5 Signs Your Sewer Line Needs Repair (Prescott &amp; Cottonwood)"</li>
+      <li><strong>Week 6:</strong> "Best Tankless Water Heater Brands for Arizona Homes — Gold Star's Expert Picks"</li>
+    </ul>
+  </div>
+
+  </div>
+  <div class="sub-tab-pane" id="seo-calllogs">
   <!-- SEO Call Log Section -->
   <div class="section-header" style="margin-top:32px;padding-top:24px;border-top:2px solid #e5e7eb">
     <h2>📞 Call Log — Organic &amp; Direct Sources (Jan–Apr 2026)</h2>
@@ -4165,213 +4382,7 @@ tbody tr:last-child td{border-bottom:none}
   <!-- GA4 Monthly Sessions Table -->
 
 
-  <!-- Charts Row -->
-  <div class="chart-row-equal">
-    <div class="chart-card">
-      <h3>📈 GA4 Sessions — Monthly Trend by Channel</h3>
-      <div class="chart-wrap"><canvas id="seoCallTrend"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <h3>🥧 Traffic by Channel — Jan–Apr 2026 (GA4)</h3>
-      <div class="chart-wrap"><canvas id="seoRankingsChart"></canvas></div>
-    </div>
-  </div>
 
-  <!-- GSC Keywords Section -->
-  <div class="section-header"><h2>Google Search Console — Top Organic Keywords (Dec 2025–Apr 2026)</h2></div>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Keyword</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg Position</th><th>Type</th><th>Opportunity</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>plumber near me</strong></td><td>7</td><td>9,568</td><td>0.07%</td><td>8.2</td><td><span class="tag tag-red">Priority Gap</span></td><td>9,568 impressions at pos 8 — every step up triples clicks</td></tr>
-        <tr><td><strong>plumbers near me</strong></td><td>9</td><td>2,537</td><td>0.35%</td><td>7.2</td><td><span class="tag tag-red">Priority Gap</span></td><td>2,537 impr at pos 7 — top 3 would add ~150 clicks/mo</td></tr>
-        <tr><td><strong>plumber</strong></td><td>4</td><td>8,608</td><td>0.05%</td><td>6.6</td><td><span class="tag tag-red">Priority Gap</span></td><td>8,608 impr — generic high-volume, rising slowly</td></tr>
-        <tr><td><strong>plumber gilbert az</strong></td><td>5</td><td>3,007</td><td>0.17%</td><td>15.3</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>3K impr at pos 15 — page 1 push would unlock major volume</td></tr>
-        <tr><td><strong>plumbers gilbert az</strong></td><td>7</td><td>745</td><td>0.94%</td><td>16.1</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>745 impr, CTR decent — position needs to improve</td></tr>
-        <tr><td><strong>plumbers in gilbert az</strong></td><td>7</td><td>753</td><td>0.93%</td><td>15.4</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>Closely clusters with "plumbers gilbert az"</td></tr>
-        <tr><td><strong>gilbert plumber</strong></td><td>2</td><td>1,009</td><td>0.20%</td><td>14.3</td><td><span class="tag tag-yellow">Local – Gilbert</span></td><td>1K impr, pos 14 — consistent Gilbert intent signal</td></tr>
-        <tr><td><strong>plumbers flagstaff</strong></td><td>7</td><td>885</td><td>0.79%</td><td>6.3</td><td><span class="tag tag-green">Local – Flagstaff</span></td><td>Strong market — pos 6, CTR shows intent</td></tr>
-        <tr><td><strong>flagstaff plumber</strong></td><td>4</td><td>353</td><td>1.13%</td><td>6.6</td><td><span class="tag tag-green">Local – Flagstaff</span></td><td>1%+ CTR signal — Flagstaff visibility growing</td></tr>
-        <tr><td><strong>plumbers tempe</strong></td><td>5</td><td>280</td><td>1.79%</td><td>6.1</td><td><span class="tag tag-green">Local – Tempe</span></td><td>1.79% CTR — highest CTR of local terms</td></tr>
-        <tr><td><strong>drain cleaning near me</strong></td><td>2</td><td>1,283</td><td>0.16%</td><td>13.0</td><td><span class="tag tag-yellow">Service Query</span></td><td>1,283 impr at pos 13 — drain service page optimization needed</td></tr>
-        <tr><td><strong>anode rod</strong></td><td>6</td><td>11,719</td><td>0.05%</td><td>4.6</td><td><span class="tag tag-green">Blog Content</span></td><td>11,719 impr — top informational driver; blog working</td></tr>
-        <tr><td><strong>bad anode rod symptoms</strong></td><td>4</td><td>903</td><td>0.44%</td><td>5.6</td><td><span class="tag tag-green">Blog Content</span></td><td>Water heater blog content capturing research traffic</td></tr>
-        <tr><td><strong>anode rod water heater</strong></td><td>2</td><td>4,359</td><td>0.05%</td><td>6.9</td><td><span class="tag tag-green">Blog Content</span></td><td>4,359 impr — informational, funnels to water heater service</td></tr>
-        <tr style="background:#fef9c3;font-weight:600"><td colspan="7">⚠️ KEY INSIGHT: "plumber near me" and "plumber gilbert az" alone account for 12,575+ impressions but barely 12 clicks. Moving these from pos 8–15 to top 3 is the single biggest organic growth lever.</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- GSC Top Pages -->
-  <div class="section-header"><h2>Google Search Console — Top Pages by Organic Clicks</h2></div>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Page</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg Position</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Homepage (/)</strong></td><td>368</td><td>22,875</td><td>1.61%</td><td>21.1</td><td>Highest click page — brand terms</td></tr>
-        <tr><td><strong>Gilbert Service Area (GBP utm)</strong></td><td>305</td><td>56,746</td><td>0.54%</td><td>4.6</td><td>Map pack click landing — position 4.6 excellent</td></tr>
-        <tr><td><strong>Blog: Anode Rod Failure (Top 3 Signs)</strong></td><td>140</td><td>59,817</td><td>0.23%</td><td>2.0</td><td>59K impressions — top informational content</td></tr>
-        <tr><td><strong>Prescott Valley Service Area (GBP utm)</strong></td><td>124</td><td>18,134</td><td>0.68%</td><td>2.7</td><td>Strong GBP click-through rate</td></tr>
-        <tr><td><strong>Flagstaff Service Area (/service-areas/flagstaff-az/)</strong></td><td>106</td><td>39,407</td><td>0.27%</td><td>14.8</td><td>High impressions — lower pos 14.8 limiting clicks</td></tr>
-        <tr><td><strong>Tempe GBP landing (/?utm=tempe)</strong></td><td>89</td><td>22,522</td><td>0.40%</td><td>4.0</td><td>Tempe map pack performing well</td></tr>
-        <tr><td><strong>Prescott Service Area</strong></td><td>51</td><td>50,141</td><td>0.10%</td><td>32.9</td><td>50K impr at pos 33 — massive opportunity if ranking improves</td></tr>
-        <tr><td><strong>Blog: Water Heater Tank Sizing</strong></td><td>45</td><td>7,293</td><td>0.62%</td><td>3.1</td><td>Good CTR — helpful content</td></tr>
-        <tr><td><strong>Blog: Reverse Osmosis Filter Guide</strong></td><td>38</td><td>14,206</td><td>0.27%</td><td>6.7</td><td>Solid blog content performance</td></tr>
-        <tr><td><strong>Blog: Water Heater Warranty Guide</strong></td><td>32</td><td>21,607</td><td>0.15%</td><td>9.9</td><td>Improving toward page 1</td></tr>
-        <tr><td><strong>Sewer Camera Inspection Page</strong></td><td>17</td><td>16,185</td><td>0.11%</td><td>40.4</td><td>16K impr at pos 40 — needs major optimization</td></tr>
-        <tr style="background:#eff6ff;font-weight:600"><td colspan="6">Total (top pages): 1,315 clicks / 328,933 impressions / 0.40% avg CTR</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Keyword Rankings Section -->
-  <!-- Opportunity Estimator -->
-  <div class="section-header"><h2>Organic Opportunity Estimator — Gilbert Market (Improvement Potential)</h2></div>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Keyword</th><th>Current Rank</th><th>Target Rank</th><th>Est. Monthly Searches</th><th>CTR at Target</th><th>Est. Add'l Clicks/Mo</th><th>Est. Add'l Calls/Mo</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Water heater repair gilbert az</td>
-          <td><span class="rank-bad">12</span></td><td><span class="rank-good">3</span></td>
-          <td>320</td><td>15%</td><td>+48</td><td>+5</td>
-        </tr>
-        <tr>
-          <td>Plumber gilbert az</td>
-          <td><span class="rank-good">1</span></td><td><span class="rank-good">1</span></td>
-          <td>590</td><td>28%</td><td>0 (already #1)</td><td>Maintain</td>
-        </tr>
-        <tr>
-          <td>Sewer repair gilbert</td>
-          <td><span class="rank-mid">9</span></td><td><span class="rank-good">3</span></td>
-          <td>210</td><td>15%</td><td>+32</td><td>+3</td>
-        </tr>
-        <tr>
-          <td>Water softener gilbert az</td>
-          <td><span class="rank-dash">—</span></td><td><span class="rank-mid">5</span></td>
-          <td>180</td><td>8%</td><td>+14</td><td>+1–2</td>
-        </tr>
-        <tr>
-          <td>Emergency plumber gilbert</td>
-          <td><span class="rank-good">2</span></td><td><span class="rank-good">1</span></td>
-          <td>260</td><td>28%</td><td>+20</td><td>+2</td>
-        </tr>
-        <tr style="background:#f0f4ff;font-weight:700">
-          <td colspan="5">Total Estimated Additional Opportunity (Gilbert)</td>
-          <td>+114 clicks/mo</td><td>+11–13 calls/mo</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Local Rankings Full Table -->
-  <div class="section-header"><h2>Local Rankings Snapshot — Year-Over-Year (Jan 2025 vs Apr 2026)</h2></div>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Market</th><th>Keyword</th><th>Jan 2025 Rank</th><th>Jan 2026 Rank</th><th>Apr 2026 Rank</th><th>YoY Change</th><th>QoQ Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Gilbert</td><td>Plumber</td><td>1</td><td>14</td><td>1</td><td><span class="tag tag-green">Recovered</span></td><td><span class="tag tag-green">↑ +13 pos</span></td></tr>
-        <tr><td>Gilbert</td><td>Drain cleaning</td><td>1</td><td>20</td><td>1</td><td><span class="tag tag-green">Recovered</span></td><td><span class="tag tag-green">↑ +19 pos</span></td></tr>
-        <tr><td>Gilbert</td><td>Water heater repair</td><td>1</td><td>—</td><td>12</td><td><span class="tag tag-red">↓ Dropped</span></td><td><span class="tag tag-yellow">Partial recovery</span></td></tr>
-        <tr><td>Prescott Valley</td><td>Plumber</td><td>1</td><td>1</td><td>1</td><td><span class="tag tag-green">Stable #1</span></td><td><span class="tag tag-green">Unchanged</span></td></tr>
-        <tr><td>Prescott Valley</td><td>Drain cleaning</td><td>1</td><td>1</td><td>1</td><td><span class="tag tag-green">Stable #1</span></td><td><span class="tag tag-green">Unchanged</span></td></tr>
-        <tr><td>Flagstaff</td><td>Plumber</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">New market #1</span></td><td><span class="tag tag-green">Stable</span></td></tr>
-        <tr><td>Flagstaff</td><td>Sewer line repair</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">Strong entry</span></td><td><span class="tag tag-green">Stable</span></td></tr>
-        <tr><td>Tempe</td><td>Plumber</td><td>—</td><td>2</td><td>1</td><td><span class="tag tag-green">New market</span></td><td><span class="tag tag-green">↑ Hit #1</span></td></tr>
-        <tr><td>Tempe</td><td>Water heater repair</td><td>—</td><td>1</td><td>1</td><td><span class="tag tag-green">Strong entry</span></td><td><span class="tag tag-green">Stable</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Insight Grid — Root Cause Analysis -->
-  <div class="insight-grid">
-    <div class="insight-card red">
-      <h4>🔴 Gilbert Feb–Mar Rankings Collapse</h4>
-      <p>Gilbert keyword rankings dropped from #1 to #14–20 in Jan–Feb 2026. Root cause: likely Google algorithm update or GBP spam filter trigger. Rankings recovered to #1 by April — suggests temporary issue, not permanent damage.</p>
-    </div>
-    <div class="insight-card red">
-      <h4>🔴 Water Softener Keyword Gap</h4>
-      <p>Water softener installation ranks only in Flagstaff (#2). All other markets show no ranking. This is a high-value service category with significant revenue potential — dedicated GBP content and service pages needed.</p>
-    </div>
-    <div class="insight-card yellow">
-      <h4>🟡 Low CTR on High-Volume Keywords</h4>
-      <p>"Plumber near me" generates 8,848 impressions at avg position 8.0 but only 0.08% CTR (7 clicks). "Plumber gilbert az" gets 2,758 impressions at position 14.8. Moving these to top 3 could add 200–400+ organic clicks/month.</p>
-    </div>
-    <div class="insight-card yellow">
-      <h4>🟡 Traffic Dominated by Paid — Organic Underperforming</h4>
-      <p>Paid Other (programmatic/display) drives 3,971 sessions (31%) vs Google Organic 2,372 (18%). Organic search engagement rate is 62.7% vs paid's 19.1% — organic visitors convert 3× better but get less budget focus.</p>
-    </div>
-    <div class="insight-card green">
-      <h4>🟢 Map Pack Dominance — 3+ Markets</h4>
-      <p>Prescott Valley, Flagstaff, and Tempe all rank #1 for core plumbing keywords. This map pack dominance is the primary driver of GBP's 873 calls — the single largest traffic source at 37%.</p>
-    </div>
-    <div class="insight-card blue">
-      <h4>🔵 New Markets Ranking Fast</h4>
-      <p>Flagstaff and Tempe launched as new GBP locations in 2024–2025. Both have achieved #1 rankings across core terms within months — evidence of strong foundational SEO setup and effective citation building.</p>
-    </div>
-  </div>
-
-  <!-- Analysis Grid -->
-  <div class="analysis-grid">
-    <div class="analysis-card strengths">
-      <h4>✅ SEO Strengths</h4>
-      <ul>
-        <li>Dominant map pack presence — #1 rankings across Flagstaff, PV, Tempe for all core terms</li>
-        <li>852,907 GSC impressions prove strong brand search visibility and growing local footprint</li>
-        <li>Website sessions grew 77% from Jan (2,286) to Mar (4,057) — accelerating organic growth</li>
-        <li>Organic search engagement rate 62.7% — far above site average of 33.2%, confirming high organic visitor intent</li>
-        <li>Blog content proven to drive impressions — anode rod article: 59,817 impressions at position 2.0</li>
-        <li>New markets (Tempe, Flagstaff) achieving top rankings within their first year — strong SEO foundation</li>
-        <li>Gilbert rankings fully recovered to #1 after Feb–Mar algorithm-related dip</li>
-      </ul>
-    </div>
-    <div class="analysis-card issues">
-      <h4>⚠️ SEO Issues</h4>
-      <ul>
-        <li>Overall site avg position 23.6 — majority of rankings on page 2–3; non-branded local terms underperforming</li>
-        <li>Gilbert water heater repair ranking at #12 — high-revenue keyword underperforming</li>
-        <li>Water softener/treatment keywords absent in Gilbert, Tempe, Prescott Valley</li>
-        <li>GBP impressions declining in Gilbert (from 1,920 in Dec 2024 → 451 in Feb 2026 → partial recovery)</li>
-        <li>Site engagement rate at 33.2% — high bounce rate (66.8%) signals landing page relevance or speed issues</li>
-        <li>Overall CTR of 0.21% is below the 1–3% benchmark for local service businesses — title/meta description optimization needed</li>
-        <li>"Plumber near me" at 8,848 impressions, pos 8 — getting just 7 clicks; top 3 position would yield ~300+ clicks/month</li>
-      </ul>
-    </div>
-    <div class="analysis-card recs">
-      <h4>🎯 SEO Priorities</h4>
-      <ul>
-        <li><strong>Optimize meta titles/descriptions</strong> for top impression pages — homepage (22K impr) and Flagstaff (39K impr) have low CTR; improving to 1% would add 400–600 clicks/month</li>
-        <li><strong>Recover Gilbert water heater ranking</strong> — build citations, add service-specific GBP posts, request reviews mentioning water heater service</li>
-        <li><strong>Create water softener service pages</strong> for Gilbert, Tempe, PV — high-value missed category</li>
-        <li><strong>Accelerate blog content</strong> — anode rod blog (59,817 impressions) proves content drives visibility; target 2 posts/month on water heater, sewer, and Prescott service keywords</li>
-        <li><strong>Improve Prescott organic page</strong> — 50,141 impressions at position 32.9 — a strong page optimization push could move this to page 1</li>
-        <li><strong>GBP post cadence</strong> — 2x/week posts across all locations to sustain map pack dominance and drive GBP click-through</li>
-        <li><strong>CRO audit</strong> — with 12,843 sessions and 33.2% engagement rate, fixing page speed and CTA placement could double call volume without increasing traffic</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Blog Topics Box -->
-  <div class="box box-green">
-    <h3>📝 Suggested Blog Topics — SEO Content Calendar</h3>
-    <ul>
-      <li><strong>Week 1:</strong> "Why Is My Water Heater Making Noise? (Gilbert &amp; Prescott Valley Homeowners Guide)" — target water heater repair keywords</li>
-      <li><strong>Week 2:</strong> "Do I Need a Water Softener in Prescott Valley, AZ?" — target water softener installation search in hard water market</li>
-      <li><strong>Week 3:</strong> "Trenchless Sewer Repair vs Traditional Digging — What Flagstaff Homeowners Need to Know"</li>
-      <li><strong>Week 4:</strong> "How Much Does a Plumber Cost in Tempe, AZ? 2026 Pricing Guide"</li>
-      <li><strong>Week 5:</strong> "Top 5 Signs Your Sewer Line Needs Repair (Prescott &amp; Cottonwood)"</li>
-      <li><strong>Week 6:</strong> "Best Tankless Water Heater Brands for Arizona Homes — Gold Star's Expert Picks"</li>
-    </ul>
   </div>
 
 </div>
