@@ -240,6 +240,7 @@ tbody tr:last-child td{border-bottom:none}
     <button class="tab-btn" data-tab="tab-pageaudit">🔎 Page Audit</button>
     <button class="tab-btn" data-tab="tab-aitraffic">🤖 AI Traffic</button>
     <button class="tab-btn" data-tab="tab-content">📅 Content Calendar</button>
+      <button class="tab-btn" data-tab="tab-hotjar">🔥 Hotjar Behavior</button>
   </div>
 </nav>
 
@@ -4875,6 +4876,80 @@ setTimeout(buildCharts, 400);
   </div>
 </div>
 
+  <!-- Hotjar Behavioral Data -->
+  <h3 style="font-size:15px;font-weight:700;margin:24px 0 12px">🔥 Hotjar Behavioral Data — Per Page (Jun 2025–Jun 2026)</h3>
+  <p style="font-size:13px;color:#6b7280;margin-bottom:12px">8,864 total Hotjar recordings. <strong>Note:</strong> Philippines (PH) traffic = 14.3% of all recordings — identified as non-real-user traffic (96.8% desktop, avg 1,272s session, 53.6 actions vs US avg 370s / 18.8 actions). Metrics below show all sessions; US-only column highlights real user signal.</p>
+  <div class="table-wrap">
+    <table style="font-size:12px">
+      <thead><tr><th>Page</th><th>HJ Sessions</th><th>Avg Duration</th><th>Avg Actions</th><th>Mobile %</th><th>US %</th><th>PH %</th><th>Engagement Signal</th></tr></thead>
+      <tbody>
+        <tr style="background:#f0fdf4">
+          <td><strong>/ (Homepage)</strong></td><td>2,902</td><td>596s (9m 56s)</td><td>21.9</td><td>33%</td><td>76%</td><td>21%</td><td><span class="tag tag-green">Strong — high actions + dwell</span></td>
+        </tr>
+        <tr>
+          <td><strong>/trusted-plumber-arizona/</strong></td><td>1,207</td><td>238s</td><td>12.1</td><td>94%</td><td>98%</td><td>1%</td><td><span class="tag tag-yellow">Facebook ad LP — 99% single-page exit</span></td>
+        </tr>
+        <tr style="background:#fef2f2">
+          <td><strong>/service-areas/flagstaff-arizona/msn/</strong></td><td>811</td><td>136s</td><td>3.4</td><td>47%</td><td>97%</td><td>0%</td><td><span class="tag tag-red">Poor — Bing display ad, near-zero engagement</span></td>
+        </tr>
+        <tr style="background:#f0fdf4">
+          <td><strong>/service-areas/gilbert-az-plumber/</strong></td><td>347</td><td>520s</td><td>18.9</td><td>34%</td><td>88%</td><td>2%</td><td><span class="tag tag-green">Good — strong intent signals</span></td>
+        </tr>
+        <tr>
+          <td><strong>/top-3-signs-of-anode-rod-failure/ (blog)</strong></td><td>250</td><td>138s</td><td>4.1</td><td>70%</td><td>83%</td><td>0%</td><td><span class="tag tag-yellow">Low actions — no CTA or internal links</span></td>
+        </tr>
+        <tr style="background:#f0fdf4">
+          <td><strong>/service-areas/prescott-valley-az-plumber/</strong></td><td>166</td><td>468s</td><td>25.8</td><td>45%</td><td>96%</td><td>2%</td><td><span class="tag tag-green">Best location page — highest action count</span></td>
+        </tr>
+        <tr>
+          <td><strong>/service-areas/flagstaff-az/</strong></td><td>143</td><td>595s</td><td>8.2</td><td>38%</td><td>87%</td><td>4%</td><td><span class="tag tag-yellow">Good dwell, low actions — needs stronger CTAs</span></td>
+        </tr>
+        <tr>
+          <td><strong>/contact/</strong></td><td>131</td><td>553s</td><td>17.3</td><td>21%</td><td>65%</td><td>27%</td><td><span class="tag tag-orange">27% PH suspicious — inflate contact metrics</span></td>
+        </tr>
+        <tr style="background:#f0fdf4">
+          <td><strong>/about-us/our-team/</strong></td><td>130</td><td>573s</td><td>37.2</td><td>21%</td><td>82%</td><td>16%</td><td><span class="tag tag-green">Highest actions sitewide — strong trust page</span></td>
+        </tr>
+        <tr>
+          <td><strong>/employment/</strong></td><td>110</td><td>523s</td><td>46.3</td><td>45%</td><td>95%</td><td>5%</td><td><span class="tag tag-yellow">High engagement but job seekers, not customers</span></td>
+        </tr>
+        <tr>
+          <td><strong>/coupons/</strong></td><td>105</td><td>671s</td><td>29.5</td><td>19%</td><td>74%</td><td>23%</td><td><span class="tag tag-orange">23% PH — some bot inflation; real users engaged</span></td>
+        </tr>
+        <tr>
+          <td><strong>/service-areas/prescott-az-plumber/</strong></td><td>84</td><td>498s</td><td>16.2</td><td>43%</td><td>96%</td><td>1%</td><td><span class="tag tag-green">Clean US traffic, good engagement</span></td>
+        </tr>
+        <tr style="background:#fef2f2">
+          <td><strong>/service-areas/tempe-az-plumber/</strong></td><td>45</td><td>1,155s</td><td>11.6</td><td>9%</td><td>51%</td><td>49%</td><td><span class="tag tag-red">49% PH — heavily bot-inflated, unreliable data</span></td>
+        </tr>
+        <tr>
+          <td><strong>/services/sewer-line-camera-inspection-gilbert-az/</strong></td><td>41</td><td>358s</td><td>33.9</td><td>71%</td><td>93%</td><td>7%</td><td><span class="tag tag-green">High actions — strong buyer intent</span></td>
+        </tr>
+        <tr>
+          <td><strong>/financing/</strong></td><td>58</td><td>503s</td><td>6.7</td><td>22%</td><td>95%</td><td>2%</td><td><span class="tag tag-yellow">Low actions despite long dwell — add CTA</span></td>
+        </tr>
+        <tr>
+          <td><strong>/best-water-leak-detection-methods... (blog)</strong></td><td>89</td><td>252s</td><td>6.1</td><td>56%</td><td>52%</td><td>6%</td><td><span class="tag tag-orange">Low US% — possible scraper/bot traffic mix</span></td>
+        </tr>
+        <tr>
+          <td><strong>Blog pages (avg, 5 posts)</strong></td><td>~62</td><td>~152s</td><td>~4.2</td><td>~68%</td><td>~91%</td><td>~0%</td><td><span class="tag tag-yellow">Organic readers but no internal link CTAs</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box box-orange" style="margin-top:16px">
+    <h3>Hotjar → Page Audit Action Items</h3>
+    <ul style="padding-left:20px;font-size:13px;color:rgba(255,255,255,.9)">
+      <li style="margin-bottom:8px"><strong style="color:#fff">/service-areas/flagstaff-arizona/msn/ — 811 sessions, 3.4 actions, 136s avg:</strong> Bing display ad landing page is burning budget. Real engagement is near zero. Add a strong headline, click-to-call CTA above the fold, and trust signals. Or pause the campaign and redirect spend to Google Local.</li>
+      <li style="margin-bottom:8px"><strong style="color:#fff">/trusted-plumber-arizona/ — 1,207 sessions, 99% single-page exit:</strong> Facebook ad traffic lands here but 99.3% leave without going deeper. Add a sticky click-to-call button, a trust section (reviews + license), and links to service pages. A/B test a new headline variant.</li>
+      <li style="margin-bottom:8px"><strong style="color:#fff">Blog pages — 60–77% mobile, avg 4 actions:</strong> All blog posts are single-page exits with no internal CTAs. Add a "Book Service" button at mid-post and end-of-post, and a "Related Service" link block above the footer. This turns organic readers into potential callers.</li>
+      <li style="margin-bottom:8px"><strong style="color:#fff">/financing/ — 58 sessions, 6.7 actions despite 503s dwell:</strong> People are reading the financing page but not acting. Add a direct apply CTA or a "call to ask about financing" button with click tracking.</li>
+      <li style="margin-bottom:8px"><strong style="color:#fff">/service-areas/tempe-az-plumber/ — 49% PH traffic:</strong> Tempe page data is unreliable due to suspected bot inflation. Exclude PH in Hotjar filters when analyzing Tempe performance. Real US user count is ~23 sessions — page is underperforming organically.</li>
+    </ul>
+  </div>
+</div>
+
 <!-- ═══════════════════════════════════════════════
      TAB: AI TRAFFIC
 ═══════════════════════════════════════════════ -->
@@ -5257,5 +5332,130 @@ setTimeout(buildCharts, 400);
   </div>
 </div>
 
+
+<!-- ═══════════════════════════════════════════════
+     TAB: HOTJAR BEHAVIOR
+═══════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-hotjar">
+  <div class="section-header">
+    <h2>Hotjar Behavioral Analytics — goldstarplumbingaz.com</h2>
+    <p>8,864 recordings · Jun 29, 2025 – Jun 29, 2026 · Site ID 3787041 &nbsp;·&nbsp; Managed by Real Time Marketing</p>
+  </div>
+
+  <!-- KPI row -->
+  <div class="kpi-row kpi-row-4">
+    <div class="kpi-card kpi-blue"><div class="kpi-label">Total Recordings</div><div class="kpi-value">8,864</div><div class="kpi-sub">Jun 2025–Jun 2026</div></div>
+    <div class="kpi-card kpi-green"><div class="kpi-label">Real User Sessions (US)</div><div class="kpi-value">7,184</div><div class="kpi-sub">81.0% of all recordings</div></div>
+    <div class="kpi-card kpi-red"><div class="kpi-label">Suspicious Traffic (PH)</div><div class="kpi-value">1,265</div><div class="kpi-sub">14.3% · 96.8% desktop · 1,272s avg</div></div>
+    <div class="kpi-card kpi-orange"><div class="kpi-label">Avg Session Duration (US)</div><div class="kpi-value">370s</div><div class="kpi-sub">6m 10s · Real users only</div></div>
+  </div>
+
+  <div class="kpi-row kpi-row-4" style="margin-top:0">
+    <div class="kpi-card"><div class="kpi-label">Avg Actions/Session (US)</div><div class="kpi-value">18.8</div><div class="kpi-sub">Clicks, scrolls, taps</div></div>
+    <div class="kpi-card"><div class="kpi-label">New Users</div><div class="kpi-value">68.3%</div><div class="kpi-sub">6,052 of 8,864 recordings</div></div>
+    <div class="kpi-card"><div class="kpi-label">Returning Users</div><div class="kpi-value">31.7%</div><div class="kpi-sub">2,812 recurring visitors</div></div>
+    <div class="kpi-card"><div class="kpi-label">Mobile Share (US)</div><div class="kpi-value">53.4%</div><div class="kpi-sub">Phone · Desktop 43.3%</div></div>
+  </div>
+
+  <!-- Bot / suspicious traffic callout -->
+  <div class="box box-red" style="margin-bottom:20px">
+    <h3>⚠️ Philippines Bot Traffic — Confirmed Non-Real-User Activity</h3>
+    <p style="font-size:13px;color:#374151;margin:8px 0 6px">Hotjar confirms the bot traffic pattern first surfaced in MS Clarity analysis. Philippines accounts for 14.3% of all recordings (1,265 sessions) — but behavioral signals are unmistakably non-human:</p>
+    <div class="kpi-row kpi-row-4" style="margin:12px 0 8px">
+      <div class="kpi-card" style="padding:10px 14px"><div class="kpi-label">PH Device Split</div><div class="kpi-value" style="font-size:18px">96.8%</div><div class="kpi-sub">Desktop (real PH users = mostly mobile)</div></div>
+      <div class="kpi-card" style="padding:10px 14px"><div class="kpi-label">PH Avg Duration</div><div class="kpi-value" style="font-size:18px">1,272s</div><div class="kpi-sub">vs US avg 370s — 3.4× longer</div></div>
+      <div class="kpi-card" style="padding:10px 14px"><div class="kpi-label">PH Avg Actions</div><div class="kpi-value" style="font-size:18px">53.6</div><div class="kpi-sub">vs US avg 18.8 — 2.8× more</div></div>
+      <div class="kpi-card" style="padding:10px 14px"><div class="kpi-label">Staging Domain</div><div class="kpi-value" style="font-size:18px">67%</div><div class="kpi-sub">PH on goldstar-stg.realtimemarketing.com</div></div>
+    </div>
+    <p style="font-size:12px;color:#374151;margin:4px 0 0"><strong>Likely source:</strong> Mix of RTM agency staff in Philippines accessing the staging server + automated bot/scraper traffic + possible click-fraud affecting PPC campaigns. PH traffic inflates session counts, duration, and action metrics on key pages — especially the Tempe location page (49% PH), Contact page (27% PH), and Coupons page (23% PH). <strong>Recommendation:</strong> Block Philippines in Hotjar + Google Ads geo-targeting to clean up data and prevent ad spend waste.</p>
+  </div>
+
+  <!-- Traffic Source Breakdown -->
+  <h3 style="font-size:15px;font-weight:700;margin:0 0 12px">Traffic Source Breakdown (from Hotjar Referrer Data)</h3>
+  <div class="kpi-row kpi-row-4">
+    <div class="kpi-card kpi-blue"><div class="kpi-label">Google Organic</div><div class="kpi-value">38.0%</div><div class="kpi-sub">3,366 sessions</div></div>
+    <div class="kpi-card"><div class="kpi-label">Direct / Unknown</div><div class="kpi-value">26.6%</div><div class="kpi-sub">2,362 sessions</div></div>
+    <div class="kpi-card kpi-orange"><div class="kpi-label">Facebook (Paid)</div><div class="kpi-value">16.1%</div><div class="kpi-sub">1,428 sessions → /trusted-plumber-arizona/</div></div>
+    <div class="kpi-card kpi-yellow"><div class="kpi-label">Bing / MSN Display</div><div class="kpi-value">9.0%</div><div class="kpi-sub">801 sessions → /flagstaff-arizona/msn/</div></div>
+  </div>
+
+  <div class="box box-orange" style="margin-bottom:20px">
+    <h3>💡 Paid Channel Behavior Findings</h3>
+    <ul style="padding-left:18px;font-size:13px;color:rgba(255,255,255,.9)">
+      <li style="margin-bottom:6px"><strong style="color:#fff">Facebook → /trusted-plumber-arizona/ (1,207 sessions, 94% mobile, 99% single-page exit):</strong> Facebook ad is driving 1,200+ sessions per year to the landing page, but 99.3% of visitors exit without clicking deeper. The page needs a sticky click-to-call CTA, social proof (review count + rating), and a clear service selector — otherwise you're paying for traffic that doesn't convert.</li>
+      <li style="margin-bottom:6px"><strong style="color:#fff">Bing/MSN → /service-areas/flagstaff-arizona/msn/ (811 sessions, 3.4 actions, 136s avg):</strong> This display ad landing page has the worst engagement on the entire site. 97% exit from this page. The MSN display campaign is not delivering qualified traffic — consider pausing or reallocating to Google Local Services Ads or Google Search for Flagstaff terms.</li>
+    </ul>
+  </div>
+
+  <!-- Monthly Trend -->
+  <h3 style="font-size:15px;font-weight:700;margin:0 0 12px">Monthly Recording Trend — Real vs Suspicious Traffic</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Month</th><th>Total Sessions</th><th>US (Real)</th><th>US %</th><th>PH (Suspicious)</th><th>PH %</th><th>Signal Quality</th></tr></thead>
+      <tbody>
+        <tr><td>Jun 2025</td><td>31</td><td>24</td><td>77%</td><td>6</td><td>19%</td><td><span class="tag tag-yellow">Baseline (partial month)</span></td></tr>
+        <tr><td>Jul 2025</td><td>781</td><td>568</td><td>73%</td><td>178</td><td>23%</td><td><span class="tag tag-orange">High bot contamination</span></td></tr>
+        <tr><td>Aug 2025</td><td>795</td><td>647</td><td>81%</td><td>130</td><td>16%</td><td><span class="tag tag-yellow">Moderate bot</span></td></tr>
+        <tr><td>Sep 2025</td><td>689</td><td>535</td><td>78%</td><td>144</td><td>21%</td><td><span class="tag tag-orange">High bot contamination</span></td></tr>
+        <tr><td>Oct 2025</td><td>849</td><td>662</td><td>78%</td><td>155</td><td>18%</td><td><span class="tag tag-yellow">Moderate bot</span></td></tr>
+        <tr><td>Nov 2025</td><td>837</td><td>687</td><td>82%</td><td>88</td><td>11%</td><td><span class="tag tag-yellow">Improving</span></td></tr>
+        <tr style="background:#f0fdf4"><td>Dec 2025</td><td>895</td><td>794</td><td>89%</td><td>49</td><td>5%</td><td><span class="tag tag-green">Best month — cleanest data</span></td></tr>
+        <tr><td>Jan 2026</td><td>805</td><td>662</td><td>82%</td><td>79</td><td>10%</td><td><span class="tag tag-yellow">Good</span></td></tr>
+        <tr><td>Feb 2026</td><td>860</td><td>688</td><td>80%</td><td>132</td><td>15%</td><td><span class="tag tag-yellow">Moderate bot</span></td></tr>
+        <tr><td>Mar 2026</td><td>837</td><td>641</td><td>77%</td><td>164</td><td>20%</td><td><span class="tag tag-orange">Bot spike — investigate</span></td></tr>
+        <tr><td>Apr 2026</td><td>253</td><td>203</td><td>80%</td><td>45</td><td>18%</td><td><span class="tag tag-yellow">Lower volume (seasonal?)</span></td></tr>
+        <tr><td>May 2026</td><td>410</td><td>351</td><td>86%</td><td>44</td><td>11%</td><td><span class="tag tag-yellow">Good</span></td></tr>
+        <tr style="background:#f0fdf4"><td>Jun 2026</td><td>822</td><td>722</td><td>88%</td><td>51</td><td>6%</td><td><span class="tag tag-green">Strong — trend improving</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Page Engagement Rankings -->
+  <h3 style="font-size:15px;font-weight:700;margin:24px 0 12px">Page Engagement Rankings — Top Pages by Behavioral Quality</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Page</th><th>Sessions</th><th>Avg Duration</th><th>Avg Actions</th><th>Mobile %</th><th>US %</th><th>Engagement Grade</th></tr></thead>
+      <tbody>
+        <tr style="background:#f0fdf4"><td>1</td><td><strong>/employment/</strong></td><td>110</td><td>523s</td><td>46.3</td><td>45%</td><td>95%</td><td><span class="tag tag-green">A — highest actions sitewide</span></td></tr>
+        <tr style="background:#f0fdf4"><td>2</td><td><strong>/about-us/our-team/</strong></td><td>130</td><td>573s</td><td>37.2</td><td>21%</td><td>82%</td><td><span class="tag tag-green">A — trust page performing well</span></td></tr>
+        <tr style="background:#f0fdf4"><td>3</td><td><strong>/coupons/</strong></td><td>105</td><td>671s</td><td>29.5</td><td>19%</td><td>74%</td><td><span class="tag tag-green">A — strong intent (discount seekers)</span></td></tr>
+        <tr style="background:#f0fdf4"><td>4</td><td><strong>/service-areas/prescott-valley-az-plumber/</strong></td><td>166</td><td>468s</td><td>25.8</td><td>45%</td><td>96%</td><td><span class="tag tag-green">A — best location page</span></td></tr>
+        <tr><td>5</td><td><strong>/ (Homepage)</strong></td><td>2,902</td><td>596s</td><td>21.9</td><td>33%</td><td>76%</td><td><span class="tag tag-green">B+ — strong across board</span></td></tr>
+        <tr><td>6</td><td><strong>/services/sewer-line-camera-inspection-gilbert-az/</strong></td><td>41</td><td>358s</td><td>33.9</td><td>71%</td><td>93%</td><td><span class="tag tag-green">B+ — high intent service page</span></td></tr>
+        <tr><td>7</td><td><strong>/service-areas/gilbert-az-plumber/</strong></td><td>347</td><td>520s</td><td>18.9</td><td>34%</td><td>88%</td><td><span class="tag tag-green">B — good location page</span></td></tr>
+        <tr><td>8</td><td><strong>/contact/</strong></td><td>131</td><td>553s</td><td>17.3</td><td>21%</td><td>65%</td><td><span class="tag tag-yellow">B— (27% PH inflates metrics)</span></td></tr>
+        <tr><td>9</td><td><strong>/service-areas/prescott-az-plumber/</strong></td><td>84</td><td>498s</td><td>16.2</td><td>43%</td><td>96%</td><td><span class="tag tag-green">B — clean traffic, good engagement</span></td></tr>
+        <tr><td>10</td><td><strong>/service-areas/flagstaff-az/</strong></td><td>143</td><td>595s</td><td>8.2</td><td>38%</td><td>87%</td><td><span class="tag tag-yellow">C+ — long dwell but low actions</span></td></tr>
+        <tr><td>11</td><td><strong>/trusted-plumber-arizona/ (FB ad LP)</strong></td><td>1,207</td><td>238s</td><td>12.1</td><td>94%</td><td>98%</td><td><span class="tag tag-yellow">C — high traffic but 99% exit</span></td></tr>
+        <tr><td>12</td><td><strong>Blog pages (avg)</strong></td><td>~62</td><td>~152s</td><td>~4.2</td><td>~68%</td><td>~91%</td><td><span class="tag tag-yellow">C — read and leave, no CTAs</span></td></tr>
+        <tr style="background:#fef2f2"><td>13</td><td><strong>/service-areas/tempe-az-plumber/</strong></td><td>45</td><td>1,155s*</td><td>11.6</td><td>9%</td><td>51%</td><td><span class="tag tag-red">F — 49% bot, data unreliable</span></td></tr>
+        <tr style="background:#fef2f2"><td>14</td><td><strong>/service-areas/flagstaff-arizona/msn/ (MSN ad LP)</strong></td><td>811</td><td>136s</td><td>3.4</td><td>47%</td><td>97%</td><td><span class="tag tag-red">F — worst engagement on site</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px;color:#6b7280;margin-top:4px">* Tempe avg duration inflated by bot sessions (49% PH). Real US-only avg would be significantly lower.</p>
+
+  <!-- Device & User Type -->
+  <h3 style="font-size:15px;font-weight:700;margin:24px 0 12px">Device &amp; User Type Breakdown</h3>
+  <div class="kpi-row kpi-row-4">
+    <div class="kpi-card kpi-blue"><div class="kpi-label">Desktop</div><div class="kpi-value">4,600</div><div class="kpi-sub">51.9% — includes most PH bot traffic</div></div>
+    <div class="kpi-card kpi-green"><div class="kpi-label">Mobile (Phone)</div><div class="kpi-value">4,020</div><div class="kpi-sub">45.4% · Mostly real US users</div></div>
+    <div class="kpi-card"><div class="kpi-label">Tablet</div><div class="kpi-value">244</div><div class="kpi-sub">2.8%</div></div>
+    <div class="kpi-card kpi-orange"><div class="kpi-label">US Mobile (real users)</div><div class="kpi-value">53.4%</div><div class="kpi-sub">3,839 of 7,184 US sessions on phone</div></div>
+  </div>
+  <p style="font-size:13px;color:#6b7280;margin-bottom:16px">When you exclude PH traffic (96.8% desktop), real US visitors are <strong>53.4% mobile</strong>. Mobile optimization is critical — especially for service pages and the Facebook ad landing page where 94% of visitors are on phones.</p>
+
+  <!-- GEO/SEO Implications -->
+  <div class="box box-navy">
+    <h3>Hotjar → SEO &amp; GEO Implications</h3>
+    <ol style="padding-left:20px">
+      <li style="margin-bottom:10px;color:rgba(255,255,255,.9);font-size:13px"><strong style="color:#f99e23">Mobile-first matters most on blogs and service pages:</strong> Blog pages see 60–77% mobile traffic but have no mobile-optimized CTAs. Google's mobile-first indexing means the mobile experience directly affects rankings. Add sticky click-to-call headers and large-tap CTAs specifically on mobile viewports.</li>
+      <li style="margin-bottom:10px;color:rgba(255,255,255,.9);font-size:13px"><strong style="color:#f99e23">/about-us/our-team/ is the site's trust anchor — amplify it for AI citations:</strong> The team page has 37.2 avg actions — the highest on the site. People care deeply about who will be in their home. Add named technician bios, license numbers, and photo schema markup here. AI systems use these E-E-A-T signals to decide who to cite in local service answers.</li>
+      <li style="margin-bottom:10px;color:rgba(255,255,255,.9);font-size:13px"><strong style="color:#f99e23">Google is the only organic channel performing (38%):</strong> Bing/MSN (9%) is almost entirely paid display with near-zero conversion. Instagram is 0.1% despite having a social presence. Google organic should be the priority for SEO investment — especially AI Overview optimization via FAQPage schema (see AI Traffic tab).</li>
+      <li style="margin-bottom:10px;color:rgba(255,255,255,.9);font-size:13px"><strong style="color:#f99e23">Exclude Philippines from all analytics &amp; ad targeting:</strong> PH traffic inflates Hotjar, Google Analytics, and potentially AdWords metrics on the Contact, Coupons, Tempe, and Flagstaff pages. In Google Ads → Locations → Exclude Philippines. In Hotjar → Recording filters → Exclude PH. This will make performance data more accurate and eliminate click fraud risk on PPC campaigns.</li>
+      <li style="margin-bottom:10px;color:rgba(255,255,255,.9);font-size:13px"><strong style="color:#f99e23">Prescott Valley is the strongest organic market — double down:</strong> /service-areas/prescott-valley-az-plumber/ has the best engagement of any location page (25.8 actions, 468s, 96% US). Invest in more Prescott Valley-specific content (seasonal tips, local references, FAQ schema) to further entrench this market before competitors do.</li>
+    </ol>
+  </div>
+</div>
 </body>
 </html>
